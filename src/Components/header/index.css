@@ -1,0 +1,28 @@
+.sub-header {
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.menu nav .nav-link {
+  font-weight: 600;
+  color: #000000 !important;
+}
+
+.menu nav .btn-link {
+  background-color: #009640;
+  color: #ffffff !important;
+  border-radius: 50px;
+  padding: 0.5rem 2rem !important;
+}
+
+.menu nav .logo-sec {
+  width: 150px;
+  filter: contrast(0.5);
+}
+
+.menu .navbar .navbar-nav {
+  gap: 10px;
+}

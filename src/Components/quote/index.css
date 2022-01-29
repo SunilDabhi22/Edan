@@ -1,0 +1,43 @@
+.quote {
+  background-color: rgb(0 150 64 / 22%);
+  padding-top: calc(100vw * 1.5 / 27);
+  padding-bottom: calc(100vw * 1.5 / 27);
+}
+
+.quote .quote-sec .quote-title h3 {
+  font-size: 3.1rem;
+}
+
+.quote .quote-sec .quote-action {
+  text-align: right;
+}
+
+.quote .quote-sec .quote-action a {
+  background-color: #009640;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.quote .quote-sec .quote-action a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .quote .quote-sec{
+    padding: 3rem 2rem !important;
+  }
+  .quote .quote-sec .justify-content-between{
+    justify-content: center !important;
+  }
+  .quote .quote-sec .quote-title h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .quote .quote-sec .quote-action{
+    text-align: center !important;
+  }
+}

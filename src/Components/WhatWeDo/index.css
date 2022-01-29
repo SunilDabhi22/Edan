@@ -1,0 +1,77 @@
+.whatwedo-main {
+  background: #000000;
+}
+
+.whatwedo-content .whatwedo-first-sec h3 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.whatwedo-content .whatwedo-first-sec p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  padding-left: 5rem;
+}
+
+.whatwedo-content .whatwedo-first-sec {
+  border-bottom: 2px solid;
+  padding-top: calc(100vw * 1.5 / 27);
+  padding-bottom: calc(100vw * 1.5 / 27);
+}
+
+.whatwedo-second-sec {
+  padding-top: calc(100vw * 1 / 15);
+  padding-bottom: calc(100vw * 1 / 15);
+}
+
+.whatwedo-second-sec h5 {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.whatwedo-second-sec p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 34px;
+}
+
+.whatwedo-second-sec .first-box {
+  background: url(../../Assets/answer.svg);
+  background-repeat: no-repeat;
+  background-size: 33%;
+  background-position: top right;
+}
+
+.whatwedo-second-sec .second-box {
+  background: url(../../Assets/pick.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: top right;
+}
+
+.whatwedo-second-sec .third-box {
+  background: url(../../Assets/fit.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top right;
+}
+
+@media (max-width: 480px) {
+  .whatwedo-content .whatwedo-first-sec h3 {
+    font-size: 2.5rem;
+    padding-right: 6rem;
+  }
+  .whatwedo-content .whatwedo-first-sec {
+    padding-top: calc(100vw * 4.5 / 27);
+    padding-bottom: calc(100vw * 2.5 / 27);
+  }
+  .whatwedo-content .whatwedo-first-sec p{
+    font-size: 1.2rem;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .whatwedo-second-sec .first-box, .whatwedo-second-sec .second-box, .whatwedo-second-sec .third-box{
+    padding: 3rem 0;
+  }
+}

@@ -1,0 +1,75 @@
+.testimonial {
+  padding-top: calc(100vw * 1.8 / 27);
+  padding-bottom: calc(100vw * 1.8 / 27);
+  color: #009640;
+}
+
+.testimonial .testimonial-sec {
+  text-align: center;
+  position: relative;
+}
+
+.testimonial .testimonial-sec .testimonial-slider {
+  position: relative;
+}
+
+.testimonial
+  .testimonial-sec
+  .testimonial-slider
+  .testimonial-slider-items span{
+      font-size: 2.5rem;
+      font-weight: 500;
+      padding: 0 14rem;
+      display: block;
+      text-align: center;
+  }
+
+.testimonial
+  .testimonial-sec
+  .testimonial-slider
+  .testimonial-slider-items
+  span.testimonial-name {
+  display: block;
+  margin-top: 1rem;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.testimonial .testimonial-sec .testimonial-slider .slider-prev-btn {
+  border: 0;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+  margin-left: 1rem;
+  position: absolute;
+  left: 2rem;
+  top: 35%;
+  bottom: 0;
+}
+
+.testimonial .testimonial-sec .testimonial-slider .slider-next-btn {
+  border: 0;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 1rem 0rem;
+  position: absolute;
+  right: 2rem;
+  top: 35%;
+  bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .testimonial .testimonial-sec .testimonial-slider .testimonial-slider-items span{
+    padding: 0 2rem;
+    font-size: 1.5rem;
+  }
+  .testimonial .testimonial-sec .testimonial-slider .slider-prev-btn{
+    left: -25px;
+  }
+  .testimonial .testimonial-sec .testimonial-slider .slider-next-btn{
+    right: -10px;
+  }
+}

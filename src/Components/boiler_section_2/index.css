@@ -1,0 +1,123 @@
+.boiler-details .left-detail-sec {
+  padding-top: calc(100vw * 1.8 / 31);
+  padding-bottom: calc(100vw * 1.8 / 31);
+  padding-right: calc(100vw * 1.5 / 27);
+  padding-left: calc(100vw * 1.5 / 27);
+  background: #009640;
+}
+
+.boiler-details {
+  background: #009640;
+}
+
+.boiler-details .container-fluid {
+  padding: 0;
+}
+
+.boiler-details .container-fluid .col-md-6 {
+  padding: 0;
+}
+
+.boiler-details .left-detail-sec h4 {
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+.boiler-details .left-detail-sec p.tagline {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.boiler-details .left-detail-sec .icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  border-top: 1px solid #ffffff;
+  padding: 25px 0;
+}
+
+.boiler-details .left-detail-sec .icon-box .icon-detail h5 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* margin: 0; */
+}
+
+.boiler-details .left-detail-sec .icon-box .icon-detail p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.boiler-details .left-detail-sec .icon-box svg {
+  width: 65px;
+  height: 65px;
+  max-width: 65px;
+  min-width: 65px;
+}
+
+.boiler-details .right-img-sec {
+  width: 100%;
+}
+
+.boiler-details .right-img-sec img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 900px;
+}
+
+.cls-1,
+.cls-2,
+.cls-3 {
+  fill: none;
+  stroke: #cecece;
+  stroke-miterlimit: 10;
+}
+.cls-1 {
+  stroke-width: 20px;
+}
+.cls-2,
+.cls-3 {
+  stroke-width: 10px;
+}
+.cls-3 {
+  stroke-dasharray: 38.98 38.98;
+}
+
+.cls-1,
+.cls-2 {
+  fill: none;
+  stroke: #cecece;
+  stroke-width: 20px;
+}
+
+.boiler-details .detail-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.boiler-details .detail-container .detail-col {
+  width: 50%;
+}
+
+@media (max-width: 480px) {
+  .boiler-details .left-detail-sec{
+    padding-top: calc(100vw * 3.8 / 31);
+    padding-bottom: calc(100vw * 3.8 / 31);
+  }
+  .boiler-details .detail-container .detail-col {
+    width: 100%;
+  }
+  .boiler-details .left-detail-sec h4{
+    font-size: 2.5rem;
+  }
+  .boiler-details .left-detail-sec .icon-box .icon-detail h5{
+    font-size: 1.2rem;
+  }
+  .boiler-details .right-img-sec img{
+    min-height: 300px;
+  }
+}

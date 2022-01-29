@@ -1,0 +1,100 @@
+@media (max-width: 480px) {
+  .boilerMain .boiler-sec h3 {
+    font-size: 2.5rem !important;
+  }
+  .boilerMain {
+    padding-top: calc(100vw * 2.5 / 27) !important;
+    padding-bottom: calc(100vw * 2.5 / 27) !important;
+  }
+  .boilerMain .boiler-sec p {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .boilerMain .boiler-sec a{
+    padding: 0.5rem 1rem !important;
+  }
+  .boilerMain .boiler-sec .slider-prev-btn{
+    margin-right: 0 !important;
+    margin-left: 3rem !important; 
+  }
+  .boilerMain .boiler-product-slider .prod-slider-items{
+    border-left: 0 !important;
+  }
+}
+
+.boilerMain {
+  background-color: #e3e4e5;
+  padding-top: calc(100vw * 1.5 / 27);
+  padding-bottom: calc(100vw * 1.5 / 27);
+}
+
+.boilerMain .boiler-sec h3 {
+  font-size: 4.5rem;
+  color: #000000;
+}
+
+.boilerMain .boiler-sec p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.boilerMain .boiler-sec a {
+  background-color: #009640;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.boilerMain .boiler-sec a:hover {
+  background: #000000;
+}
+
+.boiler-product-slider .prod-slider-items img {
+  width: 100%;
+}
+
+.boiler-product-slider .slick-slider .slick-arrow {
+  display: none !important;
+}
+
+.boilerMain .boiler-sec .slider-prev-btn {
+  border: 0;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+  margin-left: 1rem;
+}
+
+.boilerMain .boiler-sec .slider-next-btn {
+  border: 0;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 1rem 0rem;
+}
+
+.boilerMain .boiler-product-slider .prod-slider-items {
+  border-left: 1px solid #009640;
+  padding: 1rem 3rem;
+}
+
+.boilerMain .boiler-product-slider .prod-slider-items h5 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.boilerMain .boiler-product-slider .prod-slider-items span {
+  display: block;
+  font-weight: 500;
+}
+
+.boilerMain .boiler-product-slider .prod-slider-items span.prod-price {
+  color: #009640;
+  margin-top: 0.5rem;
+}

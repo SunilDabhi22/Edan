@@ -1,0 +1,19 @@
+.parnter {
+  padding-top: calc(100vw * 1.5 / 27);
+  padding-bottom: calc(100vw * 1.5 / 27);
+}
+
+.parnter .partner-sec .col img {
+  max-height: 32px;
+  margin: 0rem 1.2rem 0rem 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .parnter .partner-sec{
+    text-align: center;
+  }
+  .parnter .partner-sec .col img{
+    max-height: 28px;
+    margin: 1.2rem 1rem 1.2rem 1rem;
+  }
+}

@@ -1,0 +1,142 @@
+.how_first_sec {
+  padding-top: calc(100vw * 1.5 / 27);
+  padding-bottom: calc(100vw * 1.5 / 27);
+}
+
+.how_first_sec h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.how_first_sec p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.how_second_sec .how_qa_section {
+  background-color: rgb(0 150 64 / 17%);
+  padding-top: calc(100vw * 1.5 / 27);
+  padding-bottom: calc(100vw * 1.5 / 27);
+  margin: 2rem 0;
+}
+
+.how_second_sec .how_qa_section:last-child {
+  margin-bottom: 0;
+}
+
+.how_second_sec .how_qa_section .qa_title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.how_second_sec .how_qa_section .qa_title img {
+  max-width: 100px;
+}
+
+.how_second_sec .how_qa_section .qa_title h4 {
+  font-weight: 500;
+  font-size: 3rem;
+  color: #000000;
+}
+
+.how_second_sec .how_qa_section p {
+  color: #000;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.how_second_sec .how_qa_section .qa_img img {
+  max-height: 240px;
+  max-width: 320px;
+}
+
+.how_second_sec {
+  position: relative;
+}
+
+.how_quote_sec {
+  padding-top: calc(100vw * 1.8 / 27);
+  padding-bottom: calc(100vw * 1.8 / 27);
+}
+
+.how_quote_sec h3 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 4.2rem;
+  color: #a3a3a3;
+}
+
+.how_quote_sec span {
+  display: block;
+  text-align: right;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.how_support_sec {
+  background: #009640;
+  padding-top: calc(100vw * 1.8 / 27);
+  padding-bottom: calc(100vw * 1.8 / 27);
+}
+
+.how_support_sec h4.left-title {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.how_support_sec .right-sec-detail h5 {
+  font-size: 2.1rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.how_support_sec .right-sec-detail p {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .how_first_sec h1 {
+    font-size: 2rem;
+  }
+  .how_first_sec h1 br {
+    display: none;
+  }
+  .how_first_sec p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .how_second_sec .how_qa_section .qa_img img {
+    padding: 2rem 0;
+  }
+  .how_second_sec .how_qa_section .qa_title img {
+    max-width: 40px;
+  }
+  .how_second_sec .how_qa_section .qa_title h4 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .how_quote_sec h3 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+  .how_quote_sec span {
+    font-size: 1.2rem;
+  }
+  .how_support_sec h4.left-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .how_support_sec {
+    padding: 3rem 0;
+  }
+}
