@@ -59,3 +59,15 @@ export const MailIcon = () => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Mail</title><rect x="48" y="96" width="416" height="320" rx="40" ry="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" /><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 160l144 112 144-112" /></svg>
     )
 }
+
+export const GasIcon = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+            <defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+                <rect className="cls-1" width="2000" height="2000" />
+                <path className="cls-2" d="M1021.44,171S485,620.46,567.84,989.65s453.6,356,453.6,356" />
+                <path className="cls-2" d="M1012.29,171s536.48,449.46,453.6,818.65-453.6,356-453.6,356" />
+                <path className="cls-2" d="M1024.57,666.08S714.06,926.22,762,1139.91,1024.57,1346,1024.57,1346" />
+                <path className="cls-2" d="M1019.28,666.08s310.51,260.14,262.54,473.83S1019.28,1346,1019.28,1346" /></g></g></svg>
+    )
+}
