@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .quote-options input {
@@ -13,21 +14,14 @@
   appearance: none;
 }
 
-.quote-options input:active + .quote-cc {
-  opacity: 0.9;
-}
-
 .quote-options input:checked + .quote-cc {
-  -webkit-filter: none;
-  -moz-filter: none;
-  filter: none;
+  background: #009640;
 }
 
 .quote-cc {
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
-  filter: drop-shadow(2px 4px 6px black);
 }
 
 .quote-options {
@@ -44,10 +38,6 @@
   max-width: 325px;
 }
 
-.quote-options .radio-item:hover{
-  /* background: green; */
-}
-
 .cls-1,
 .cls-2 {
   fill: none;
@@ -58,6 +48,113 @@
   stroke-width: 20px;
 }
 
-.quote-options .quote-options-label svg{
+.quote-options .quote-options-label {
+  background: #ededed;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 10px #ededed;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.quote-options .quote-options-label:hover {
+  background: #009640;
+  transform: scale(1.1);
+}
+
+.quote-options .quote-options-label span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+}
+
+.quote-options .quote-options-label svg {
   width: 100%;
+}
+
+.quote-options .quote-options-label img {
+  width: 100%;
+}
+
+.quote-options .quote-options-label svg .cls-1 {
+  stroke: none;
+}
+
+.boiler-quote-main h3 {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.boiler-quote-main p {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.boiler-quote-main .submit_btn {
+  background-color: #009640;
+  color: #ffffff !important;
+  border-radius: 50px;
+  padding: 0.8rem 2rem !important;
+  border: 0;
+  font-size: 1.2rem;
+}
+
+.boiler-quote-main .submit_btn:hover {
+  background: #000000;
+}
+
+.boiler-quote-main .submit_btn img {
+  max-width: 25px;
+  filter: invert(1);
+  margin-top: -2px;
+}
+
+.boiler-quote-main .back_btn {
+  background-color: #000000;
+  color: #ffffff !important;
+  border-radius: 50px;
+  padding: 0.8rem 2rem !important;
+  border: 0;
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+
+.boiler-quote-main .contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boiler-quote-main .contact-details .phone-info,
+.boiler-quote-main .contact-details .chat-support {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+}
+
+.boiler-quote-main .contact-details .phone-info div span {
+  display: block;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.boiler-quote-main .contact-details .chat-support div span {
+  display: block;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+.boiler-quote-main .contact-details .phone-info img,
+.boiler-quote-main .contact-details .chat-support img{
+  height: 70px;
 }

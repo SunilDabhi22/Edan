@@ -34,7 +34,7 @@ export default function Header(props: any) {
                                 </NavDropdown>
                             </Nav>
                             <Nav>
-                                <Nav.Link href="#deets" className='btn-link'>See Fixed Prices</Nav.Link>
+                                <Nav.Link href="/boiler-quote" className='btn-link'>See Fixed Prices</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

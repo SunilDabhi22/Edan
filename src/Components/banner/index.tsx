@@ -12,7 +12,7 @@ export default function HomePage(props: any) {
                         <h3>New boilers,
                             fitted fast.</h3>
                         <p>Get a fixed online quote for your new boiler in 60 seconds, with installation as quick as tomorrow*</p>
-                        <a href='#!'>See Fixed Prices</a>
+                        <a href='/boiler-quote'>See Fixed Prices</a>
                     </div>
                 </Row>
             </Container>
