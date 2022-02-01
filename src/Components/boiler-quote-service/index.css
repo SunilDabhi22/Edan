@@ -122,6 +122,45 @@
   margin-right: 2rem;
 }
 
+.boiler-quote-main .refresh_btn {
+  background: transparent;
+  border: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #747474;
+}
+.boiler-quote-main .refresh_btn_dark svg {
+  width: 30px;
+  fill: #ffffff;
+  height: 30px;
+}
+
+.boiler-quote-main .refresh_btn_dark {
+  background-color: #bf2c25;
+  color: #ffffff !important;
+  border-radius: 50px;
+  padding: 0.8rem 2rem !important;
+  border: 0;
+  font-size: 1.2rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.boiler-quote-main .refresh_btn svg {
+  fill: #747474;
+  width: 30px;
+  height: 30px;
+}
+
 .boiler-quote-main .contact-details {
   display: flex;
   flex-wrap: wrap;
@@ -153,8 +192,7 @@
   font-weight: 500;
 }
 
-
 .boiler-quote-main .contact-details .phone-info img,
-.boiler-quote-main .contact-details .chat-support img{
+.boiler-quote-main .contact-details .chat-support img {
   height: 70px;
 }
