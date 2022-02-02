@@ -1,13 +1,6 @@
 import { useState } from 'react'
 import './index.css'
-import { Formik, Form, Field, FormikConfig, FormikValues } from 'formik';
-import React from 'react'
-import { GasIcon } from '../../SharedComponents/sharedIcons'
-import RightArrowIcon from '../../Assets/right-arrow.png';
-import SameRoom from './assets/same-room.svg';
-import SameFloor from './assets/same-floor.svg';
-import OtherFloor from './assets/other-floor.svg';
-import OtherRoom from './assets/other-room.svg';
+import { Formik, Form } from 'formik';
 
 import GetStarted from './components/getStarted';
 import BoilerSection1 from './components/which_boiler';
@@ -22,6 +15,11 @@ import PropertyType from './components/property_type';
 import HowManyBedrooms from './components/how_many_bedroom';
 import Radiators from './components/radiators';
 import Bathtubs from './components/bathtubs';
+import ShowerCubicles from './components/shower_cubicles';
+import FlueExit from './components/flue_exit';
+import RoofType from './components/roof_type';
+import PostCodeScr from './components/postcodeScreen';
+import NewBoilerPlace from './components/new_boiler_place';
 
 export default function BoilerQuoteService(props: any) {
 
@@ -31,7 +29,9 @@ export default function BoilerQuoteService(props: any) {
         'back_boiler', 'combi_boiler_r', 'regular_boiler_r', 'system_boiler_r', 'no_new_loc', 'yes_new_loc',
         'no_boiler_working', 'yes_boiler_working', 'wall_mounted', 'floor_mounted', 'semi_detached', 'detached',
         'terraced', 'bungalow', 'flat_apart', 'one_bed', 'two_bed', 'three_bed', 'four_bed', 'five_plus_bed',
-        'two_bathtubs', 'three_plus_bathtubs', 'one_bathtubs', 'no_bathtubs', 'rad_0_5', 'rad_6_9', 'rad_10_13', 'red_14_16', 'rad_17_plus',
+        'two_bathtubs', 'three_plus_bathtubs', 'one_bathtubs', 'no_bathtubs', 'rad_0_5', 'rad_6_9', 'rad_10_13', 'red_14_16',
+        'rad_17_plus', 'no_shower_cubicles', 'one_shower_cubicle', 'two_plus_shower_cubicles', 'external_wall', 'roof',
+        'pitched', 'flat', 'same_room', 'same_floor', 'another_floor', 'other_place',
     ];
 
     const [isRadioVal, setRadioVal] = useState('');
@@ -47,7 +47,7 @@ export default function BoilerQuoteService(props: any) {
 
     const handleRestart = () => {
         setRadioVal('');
-        setIsStart('');
+        setIsStart('start');
     }
 
     return (
@@ -72,11 +72,11 @@ export default function BoilerQuoteService(props: any) {
                             <BoilerSection1 {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {isRadioVal === 'lpg' &&
+                        {['other_place', 'lpg'].includes(isRadioVal) &&
                             <BoilerSection2 {...props} handleRestart={handleRestart} />
                         }
 
-                        {isRadioVal === 'other_boiler' &&
+                        {['other_boiler', 'regular_boiler_r', 'system_boiler_r'].includes(isRadioVal) &&
                             <RestartSection {...props} handleRestart={handleRestart} />
                         }
 
@@ -88,7 +88,7 @@ export default function BoilerQuoteService(props: any) {
                             <ReplaceBoiler {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['combi_boiler_r', 'regular_boiler_r', 'system_boiler_r'].includes(isRadioVal) &&
+                        {['combi_boiler_r'].includes(isRadioVal) &&
                             <NewLocationBoiler {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
@@ -96,7 +96,11 @@ export default function BoilerQuoteService(props: any) {
                             <WallMounted {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['wall_mounted', 'floor_mounted'].includes(isRadioVal) &&
+                        {['yes_new_loc'].includes(isRadioVal) &&
+                            <NewBoilerPlace {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['wall_mounted', 'floor_mounted', 'same_room', 'same_floor', 'another_floor'].includes(isRadioVal) &&
                             <WorkingBoiler {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
@@ -114,6 +118,22 @@ export default function BoilerQuoteService(props: any) {
 
                         {['rad_0_5', 'rad_6_9', 'rad_10_13', 'red_14_16', 'rad_17_plus'].includes(isRadioVal) &&
                             <Bathtubs {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['no_bathtubs', 'one_bathtubs', 'two_bathtubs', 'three_plus_bathtubs'].includes(isRadioVal) &&
+                            <ShowerCubicles {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['no_shower_cubicles', 'two_plus_shower_cubicles', 'one_shower_cubicle'].includes(isRadioVal) &&
+                            <FlueExit {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['roof'].includes(isRadioVal) &&
+                            <RoofType {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['pitched', 'flat', 'external_wall'].includes(isRadioVal) &&
+                            <PostCodeScr {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {/* <button type='submit'>Submit</button> */}

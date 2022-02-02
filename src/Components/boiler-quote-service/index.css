@@ -196,3 +196,15 @@
 .boiler-quote-main .contact-details .chat-support img {
   height: 70px;
 }
+
+.postcode_input{
+  background: #e4edff;
+  border: 0;
+  display: block;
+  box-shadow: 0 0 10px #e4e4e4;
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
