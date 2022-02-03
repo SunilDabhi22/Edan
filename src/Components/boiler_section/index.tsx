@@ -85,10 +85,10 @@ export default function BoilerSection(props: any) {
                 <Container>
                     <Row className="justify-content-between align-items-center">
                         <Col md={5}>
-                            <h3>New boilers, for every budget.</h3>
-                            <p>Find a boiler that's right for your home, at a price that's right for your wallet.</p>
+                            <h3>Every boiler, for every price.</h3>
+                            <p>Find a boiler that's the right fit for your home, at a price that's right for your needs.</p>
 
-                            <a href='#!'>Get your fixed price</a>
+                            <a href='/boiler-quote'>Get your new boiler</a>
 
                             <button className='slider-prev-btn' onClick={() => slider?.current?.slickPrev()}>
                                 <PrevArrowIcon />

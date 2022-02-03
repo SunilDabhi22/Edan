@@ -11,7 +11,8 @@
   font-size: 1.6rem;
   color: #ffffff;
   font-weight: 500;
-  padding-left: 5rem;
+  padding-left: 1rem;
+  text-align: right;
 }
 
 .whatwedo-content .whatwedo-first-sec {
@@ -70,6 +71,7 @@
     font-size: 1.2rem;
     padding: 0;
     margin-top: 10px;
+    text-align: left;
   }
   .whatwedo-second-sec .first-box, .whatwedo-second-sec .second-box, .whatwedo-second-sec .third-box{
     padding: 3rem 0;

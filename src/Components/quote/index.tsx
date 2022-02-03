@@ -12,7 +12,7 @@ export default function Quote(props: any) {
                             <h3>Buy your new boiler, better.</h3>
                         </Col>
                         <Col sm={4} className='quote-action'>
-                            <Link to='/'>Get your fixed price</Link>
+                            <Link to='/'>Get your new boiler</Link>
                         </Col>
                     </Row>
                 </Container>

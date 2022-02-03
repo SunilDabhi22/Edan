@@ -1,4 +1,5 @@
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './index.css'
 
 export default function FAQSection(props: any) {
@@ -35,7 +36,7 @@ export default function FAQSection(props: any) {
                                 <Accordion.Item eventKey="2">
                                     <Accordion.Header>Do you send out a surveyor or salesperson first?</Accordion.Header>
                                     <Accordion.Body>
-                                        <p>No, we don't. We hate salespeople as much as you do.</p>
+                                        <p>No, we do not. We focus all our efforts online to make it as convenient for you as possible.</p>
                                         <p>In order to get a fixed price for your new boiler, we simply ask a handful of super easy questions. Then, once you've checked out, you'll need to upload a handful of super simple pictures. Here's how it works.</p>
                                         <p>If there's extras on the day, like gas pipe upgrades, or condense pipe installations, your price won't change - it's a fixed price guarantee.</p>
                                     </Accordion.Body>
@@ -60,9 +61,9 @@ export default function FAQSection(props: any) {
                                     <Accordion.Header>Buying a new boiler online... seems odd, is it?</Accordion.Header>
                                     <Accordion.Body>
                                         <p>Kind of, when you compare it to the traditional way.</p>
-                                        <p>But, who wants to wait around days for a salesperson, then wait more days for their bloated quote. Then, when you've got the quote, wait weeks before they can fit your new boiler in?</p>
+                                        <p>We knew that people wanted a faster solution to fitting a new boiler so we took several steps away from the long, sometimes frustrating process of fitting boilers and bring a new way to do it, faster and more efficient. </p>
                                         <p>Tech has transformed so many industries for the better. Takeaways, Deliveroo. Hotels, Airbnb. Heatable is Uber, for boilers.</p>
-                                        <p>Fixed online quotes, no salespeople and next day installations - it's the best way to buy the thing you don't want to buy.</p>
+                                        <p>Fixed online quotes, no salespeople needed and next day installations - it's the best way to buy the thing you need for you and your home.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
@@ -75,7 +76,7 @@ export default function FAQSection(props: any) {
                         <Row className="justify-content-between align-items-center">
                             <Col sm={6}>
                                 <div className='faq-all-btn'>
-                                    <button>See All</button>
+                                    <Link to='/faqs'>See All</Link>
                                 </div>
                             </Col>
                             <Col sm={6}>

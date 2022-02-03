@@ -15,11 +15,11 @@ export default function HowItWorksPage(props: any) {
             <div className='how_first_sec'>
                 <Container>
                     <Row className='align-items-center'>
-                        <Col md={4} style={{ textAlign: 'center' }}>
+                        <Col md={5} style={{ textAlign: 'center' }}>
                             <h1>How it<br /> works</h1>
                         </Col>
-                        <Col md={8}>
-                            <p>It's the best way to buy the thing you don't want to buy</p>
+                        <Col md={7}>
+                            <p>It's the best way to buy the thing you need.</p>
                         </Col>
                     </Row>
                 </Container>
@@ -36,10 +36,10 @@ export default function HowItWorksPage(props: any) {
                             </Col>
                             <Col md={7}>
                                 <div className='qa_title'>
-                                    <img src={Step1} alt='' /> <h4>You answer</h4>
+                                    <img src={Step1} alt='' /> <h4>We ask</h4>
                                 </div>
                                 <p>Some simple questions about your home and it's current heating system. From this, we can figure out which type of boiler you'll need, how powerful it will need to be and see if it's going to need any other additional safety attachments.</p>
-                                <p>It takes about 60 seconds to get your quote, and there's not a salesperson in sight.</p>
+                                <p>It takes as little as 60 seconds to get your quote, and there are no knocks at your door.</p>
                             </Col>
                         </Row>
                     </Container>
@@ -78,7 +78,7 @@ export default function HowItWorksPage(props: any) {
                                     <img src={Step3} alt='' /> <h4>We fit</h4>
                                 </div>
                                 <p>Some simple questions about your home and it's current heating system. From this, we can figure out which type of boiler you'll need, how powerful it will need to be and see if it's going to need any other additional safety attachments.</p>
-                                <p>It takes about 60 seconds to get your quote, and there's not a salesperson in sight.</p>
+                                <p>It takes as little as 60 seconds to get your quote, and there are no knocks at your door.</p>
                             </Col>
                         </Row>
                     </Container>

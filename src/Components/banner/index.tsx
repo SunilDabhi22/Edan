@@ -9,10 +9,9 @@ export default function HomePage(props: any) {
             <Container style={{ zIndex: 9 }}>
                 <Row>
                     <div className='banner-text'>
-                        <h3>New boilers,
-                            fitted fast.</h3>
-                        <p>Get a fixed online quote for your new boiler in 60 seconds, with installation as quick as tomorrow*</p>
-                        <a href='/boiler-quote'>See Fixed Prices</a>
+                        <h3>Quality Boilers, Replace fast.</h3>
+                        <p>Gain an additional online quote with your brand new boiler, get it installed quick!</p>
+                        <a href='/boiler-quote'>Get your new boiler</a>
                     </div>
                 </Row>
             </Container>

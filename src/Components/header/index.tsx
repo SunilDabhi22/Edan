@@ -24,17 +24,18 @@ export default function Header(props: any) {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="m-auto">
                                 <Nav.Link href="/how-it-works">How it works</Nav.Link>
-                                <Nav.Link href="#pricing">Our Story</Nav.Link>
-                                <NavDropdown title="Help & advice" id="collasible-nav-dropdown">
+                                <Nav.Link href="#pricing">About Us</Nav.Link>
+                                <Nav.Link href="#pricing">Help & Support</Nav.Link>
+                                {/* <NavDropdown title="Help & Support" id="collasible-nav-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                                </NavDropdown>
+                                </NavDropdown> */}
                             </Nav>
                             <Nav>
-                                <Nav.Link href="/boiler-quote" className='btn-link'>See Fixed Prices</Nav.Link>
+                                <Nav.Link href="/boiler-quote" className='btn-link'>Get your new boiler</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
