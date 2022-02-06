@@ -8,6 +8,7 @@ import Contact from './Pages/contact';
 import TermsCondition from './Pages/terms_conditions';
 import PrivacyPolicy from './Pages/privacy_policy';
 import BoilerQuote from './Pages/boiler-quote';
+import AboutUs from './Pages/about_us';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/terms" element={<TermsCondition />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path='/boiler-quote' element={<BoilerQuote />} />
+          <Route path='/about-us' element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </div>

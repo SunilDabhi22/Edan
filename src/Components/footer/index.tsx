@@ -18,19 +18,19 @@ export default function Footer(props: any) {
             <div className='footer-first-sec'>
                 <Container>
                     <Row className="justify-content-center">
-                        <Col className="text-center">
-                            <Link to='/'>New Boilers</Link>
+                        <Col className="text-center" lg md sm xs={12}>
+                            <Link to='/boiler-quote'>New Boilers</Link>
                         </Col>
-                        <Col className="text-center">
+                        <Col className="text-center" lg md sm xs={12}>
                             <Link to='/how-it-works'>How it works</Link>
                         </Col>
-                        <Col className="text-center">
-                            <Link to='/'>Our Story</Link>
+                        <Col className="text-center" lg md sm xs={12}>
+                            <Link to='/about-us'>About Us</Link>
                         </Col>
-                        <Col className="text-center">
+                        <Col className="text-center" lg md sm xs={12}>
                             <Link to='/faqs'>FAQ's</Link>
                         </Col>
-                        <Col className="text-center">
+                        <Col className="text-center" lg md sm xs={12}>
                             <Link to='/contact-us'>Contact</Link>
                         </Col>
                     </Row>

@@ -1,0 +1,124 @@
+.about_main .about_first_sec {
+  background: linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 92%) 20%,
+      rgb(0 0 0 / 92%) 100%
+    ),
+    url(../../Assets/marketing-image.jpg);
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 11vh);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.about_main .about_first_sec p.about_content {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about_light_sec {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  height: calc(100vh - 11vh);
+}
+
+.about_light_sec p {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.about_light_sec p:last-child {
+  margin: 0 auto;
+}
+
+.about_green_sec {
+  background: #009640;
+  width: 100%;
+  text-align: center;
+  height: calc(100vh - 11vh);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.about_green_sec p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about_main .about_last_sec {
+  background: linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 92%) 20%,
+      rgb(0 0 0 / 92%) 100%
+    ),
+    url(../../Assets/marketing-image.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding: 5rem 0;
+}
+
+.about_main .about_last_sec p.about_content {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.about_main .about_last_sec p.about_content:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .about_main .about_first_sec p.about_content {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .about_green_sec p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .about_light_sec p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .about_main .about_last_sec p.about_content {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .about_light_sec {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .about_green_sec {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .about_main .about_last_sec{
+      padding: 2rem 0;
+  }
+}

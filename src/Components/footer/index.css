@@ -8,7 +8,7 @@
   margin-bottom: 2rem;
 }
 
-.footer .footer-first-sec .col a {
+.footer .footer-first-sec a {
   color: #009640;
   font-weight: 600;
   text-transform: uppercase;
@@ -21,7 +21,7 @@
   border-radius: 50px;
 }
 
-.footer .footer-first-sec .col a:hover {
+.footer .footer-first-sec a:hover {
   background-color: #009640;
   color: #ffffff;
 }
@@ -126,5 +126,9 @@
   }
   .footer .footer-third-sec{
     margin: 0 !important;
+  }
+  .footer .footer-first-sec a{
+    font-size: 1rem;
+    margin: 0.5rem 0;
   }
 }

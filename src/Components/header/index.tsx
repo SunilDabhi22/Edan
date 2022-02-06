@@ -24,7 +24,7 @@ export default function Header(props: any) {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="m-auto">
                                 <Nav.Link href="/how-it-works">How it works</Nav.Link>
-                                <Nav.Link href="#pricing">About Us</Nav.Link>
+                                <Nav.Link href="/about-us">About Us</Nav.Link>
                                 <Nav.Link href="#pricing">Help & Support</Nav.Link>
                                 {/* <NavDropdown title="Help & Support" id="collasible-nav-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
