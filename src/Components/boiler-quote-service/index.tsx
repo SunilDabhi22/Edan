@@ -36,6 +36,7 @@ export default function BoilerQuoteService(props: any) {
 
     const [isRadioVal, setRadioVal] = useState('');
     const [isStart, setIsStart]: any = useState('');
+    const [calQuote, setCalQuote]: any = useState(false);
 
     const handleChangeRadio = (e: any) => {
         setRadioVal(e.target.value);
@@ -54,11 +55,10 @@ export default function BoilerQuoteService(props: any) {
         <div className='boiler-quote-main'>
             <Formik
                 initialValues={{
-                    fuel_power: '',
-                    boiler_type: ''
+
                 }}
                 onSubmit={async (values: any) => {
-                    console.log('values', values);
+                    props.handleQuote(values, true);
                 }}
             >
                 {({ values, setFieldValue }) => (
@@ -69,7 +69,7 @@ export default function BoilerQuoteService(props: any) {
 
                         {isStart === 'start' &&
                             !allRadioValues.includes(isRadioVal) &&
-                            <BoilerSection1 {...props} handleChangeRadio={handleChangeRadio} />
+                            <BoilerSection1 setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['other_place', 'lpg'].includes(isRadioVal) &&
@@ -133,8 +133,13 @@ export default function BoilerQuoteService(props: any) {
                         }
 
                         {['pitched', 'flat', 'external_wall'].includes(isRadioVal) &&
-                            <PostCodeScr {...props} handleChangeRadio={handleChangeRadio} />
+                            // !calQuote &&
+                            <PostCodeScr {...props} />
                         }
+
+                        {/* {calQuote &&
+                            <QuoteResult />
+                        } */}
 
                         {/* <button type='submit'>Submit</button> */}
                     </Form>

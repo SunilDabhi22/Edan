@@ -197,7 +197,7 @@
   height: 70px;
 }
 
-.postcode_input{
+.postcode_input {
   background: #e4edff;
   border: 0;
   display: block;
@@ -207,4 +207,329 @@
   text-align: center;
   font-weight: 500;
   margin-bottom: 30px;
+}
+
+.boiler_quote_prod {
+  padding: 3rem 0;
+  background: rgb(0 150 65 / 15%);
+}
+
+.boiler_quote_prod .boiler_prod_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  margin: 2rem 0;
+}
+
+.boiler_quote_prod .boiler_prod_header h3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.boiler_quote_prod .boiler_prod_header p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.boiler_quote_prod .boiler_prod_item {
+  background: #009640;
+  padding: 3rem 0;
+  color: #ffffff;
+  margin: 3rem 0;
+}
+
+.boiler_quote_prod .light_boiler_ver {
+  background: #ffffff;
+  color: #000000;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_left h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_left p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_left span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 0;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_left span svg {
+  max-width: 20px;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_left span span.percent_badge {
+  border: 1.8px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_right .prod_img {
+  padding: 0 4rem;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_right .prod_img img {
+  width: 100%;
+  max-width: 270px;
+  min-width: 270px;
+  box-sizing: border-box;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_right .prod_prices {
+  width: 100%;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_right .prod_prices h4 {
+  font-size: 2.5rem;
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+}
+
+.boiler_quote_prod .boiler_prod_item .prod_right .prod_prices .prod_price_box {
+  border: 1px solid #000000;
+  display: block;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .dark_line {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span {
+  display: block;
+  position: relative;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span
+  .price_cut {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgb(255 70 70);
+  font-size: 0.9rem;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span
+  .price_cut
+  span {
+  text-decoration: line-through;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount {
+  padding: 1rem 2rem;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span
+  .prod_real_price {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span
+  .prod_note {
+  font-size: 10px;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span
+  .prod_month_price {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span
+  .prod_month_note {
+  font-size: 12px;
+  text-align: right;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span.divider::after {
+  content: "";
+  width: 35px;
+  position: absolute;
+  overflow: hidden;
+  border-top: 1px solid #000;
+  transform: rotate(-63deg);
+  top: -19px;
+  left: 6px;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_price_box
+  .prod_price_discount
+  span.divider::before {
+  content: "";
+  width: 35px;
+  position: absolute;
+  overflow: hidden;
+  border-top: 1px solid #000;
+  transform: rotate(-63deg);
+  bottom: -19px;
+  left: -25px;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_submit
+  button {
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 2rem;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 0.8rem 3rem;
+}
+
+.boiler_quote_prod
+  .boiler_prod_item
+  .prod_right
+  .prod_prices
+  .prod_submit
+  button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 2rem;
+  border: 0;
+  border-radius: 50px;
+  padding: 0.8rem 3rem;
+}
+
+.answer_section h3 {
+  font-size: 2.5rem;
+}
+
+.answer_section p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.answer_section .refresh_btn_dark {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.answer_section .refresh_btn_dark svg{
+  width: 25px;
+  display: block;
+}
+
+.answer_section .answer_list li {
+  font-size: 1.2rem;
+  list-style: none;
+  border-bottom: 1px solid;
+  padding: 0.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer_section .answer_list li span {
+  font-weight: 500;
 }

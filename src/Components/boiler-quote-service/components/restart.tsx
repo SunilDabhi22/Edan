@@ -1,11 +1,5 @@
 import '../index.css'
-import RightArrowIcon from '../../../Assets/right-arrow.png';
-import { Formik, Form, Field, FormikConfig, FormikValues } from 'formik';
-import { GasIcon, RefreshIcon } from '../../../SharedComponents/sharedIcons'
-import LPGImg from '../assets/lpg.svg';
-import OtherImg from '../assets/other.svg';
-import PhoneIcon from '../../../Assets/phone.png';
-import ChatSupportIcon from '../../../Assets/chat-support.png';
+import { RefreshIcon } from '../../../SharedComponents/sharedIcons'
 
 export default function ContactInfo(props: any) {
     return (

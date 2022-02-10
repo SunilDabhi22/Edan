@@ -22,7 +22,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'gas'}
                                     name="fuel_power"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('fuel_power', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="gas" className='quote-options-label quote-cc'>
                                     <GasIcon />
@@ -38,7 +41,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'lpg'}
                                     name="fuel_power"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('fuel_power', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="lpg" className='quote-options-label quote-cc'>
                                     <img src={LPGImg} alt='LPG' />
@@ -54,7 +60,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'other_boiler'}
                                     name="fuel_power"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('fuel_power', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="other_boiler" className='quote-options-label quote-cc'>
                                     <img src={OtherImg} alt='other' />

@@ -2,7 +2,7 @@ import '../index.css'
 import RightArrowIcon from '../../../Assets/right-arrow.png';
 import { Field } from 'formik';
 
-export default function getStarted(props: any) {
+export default function CalculateQuote(props: any) {
 
     return (
         <div className="quote-start-step">
@@ -14,8 +14,8 @@ export default function getStarted(props: any) {
                     <input {...field} type="text" className='postcode_input' placeholder="e.g SW5" />
                 )}
             />
-            <button type='button' className='submit_btn'>
-                Next <img src={RightArrowIcon} />
+            <button type='submit' className='submit_btn'>
+                Calculate my quotes <img src={RightArrowIcon} />
             </button>
         </div>
     )
