@@ -10,15 +10,18 @@
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
-  .boilerMain .boiler-sec a{
+  .boilerMain .boiler-sec a {
     padding: 0.5rem 1rem !important;
   }
-  .boilerMain .boiler-sec .slider-prev-btn{
+  .boilerMain .boiler-sec .slider-prev-btn {
     margin-right: 0 !important;
-    margin-left: 3rem !important; 
+    margin-left: 3rem !important;
   }
-  .boilerMain .boiler-product-slider .prod-slider-items{
+  .boilerMain .boiler-product-slider .prod-slider-items {
     border-left: 0 !important;
+  }
+  .boiler-sec {
+    padding: 0 !important;
   }
 }
 
@@ -61,7 +64,9 @@
 .boiler-product-slider .slick-slider .slick-arrow {
   display: none !important;
 }
-
+.boiler-sec {
+  padding: 0 3rem;
+}
 .boilerMain .boiler-sec .slider-prev-btn {
   border: 0;
   background: transparent;

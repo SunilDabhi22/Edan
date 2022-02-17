@@ -4,10 +4,12 @@ import './index.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MostPopularImg from '../../Assets/product/ETEC_R_FRONT-25R-straight3_20n.png'
-import SuperValueImg from '../../Assets/product/ETEC_S_FRONT_RET-3_20n-053 E-Tec on trans bg.png'
-import LatestModelImg from '../../Assets/product/ETEC-28-FRONT-ED-3_20n.png'
-import UltraEfficientImg from '../../Assets/product/ETEC-PLUS28_RET-3_20n.png'
+import MostPopularImg from '../../Assets/product/most-popular.png'
+import SuperValueImg from '../../Assets/product/super-value.png'
+import LatestModelImg from '../../Assets/product/latest-model.png'
+import UltraEfficientImg from '../../Assets/product/ultra-efficient.png'
+import LowCostImg from '../../Assets/product/low-cost.png'
+import CompactSizeImg from '../../Assets/product/compact-size.png'
 
 export default function BoilerSection(props: any) {
 
@@ -82,9 +84,9 @@ export default function BoilerSection(props: any) {
     return (
         <div className='boilerMain'>
             <div className='boiler-sec'>
-                <Container>
+                <Container fluid>
                     <Row className="justify-content-between align-items-center">
-                        <Col md={5}>
+                        <Col md={4}>
                             <h3>Every boiler, for every price.</h3>
                             <p>Find a boiler that's the right fit for your home, at a price that's right for your needs.</p>
 
@@ -97,7 +99,7 @@ export default function BoilerSection(props: any) {
                                 <NextArrowIcon />
                             </button>
                         </Col>
-                        <Col md={7}>
+                        <Col md={8}>
                             <div className='boiler-product-slider'>
                                 <Slider ref={slider} {...settings}>
                                     <div className='prod-slider-items'>
@@ -123,6 +125,19 @@ export default function BoilerSection(props: any) {
                                         <span>Viessmann Vitodens 100</span>
                                         <span className='prod-price'>Fitted from £2,395</span>
                                         <img src={UltraEfficientImg} alt='' />
+                                    </div>
+
+                                    <div className='prod-slider-items'>
+                                        <h5>Compact Size</h5>
+                                        <span>Worcester Bosch CDi Compact</span>
+                                        <span className='prod-price'>Fitted from £2,095</span>
+                                        <img src={CompactSizeImg} alt='' />
+                                    </div>
+                                    <div className='prod-slider-items'>
+                                        <h5>Low-Cost Option</h5>
+                                        <span>Alpha E-Tec</span>
+                                        <span className='prod-price'>Fitted from £1,665</span>
+                                        <img src={LowCostImg} alt='' />
                                     </div>
                                 </Slider>
                             </div>
