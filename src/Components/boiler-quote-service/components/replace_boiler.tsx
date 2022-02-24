@@ -11,7 +11,7 @@ export default function BoilerFirst(props: any) {
             <h3>What type of boiler do you want to replace it with?</h3>
             <div className='quote-options'>
                 <Field
-                    name="boiler_replace"
+                    name="replace_boiler"
                     render={({ field }: any) => (
                         <>
                             <div className="radio-item">
@@ -20,9 +20,12 @@ export default function BoilerFirst(props: any) {
                                     id="combi_boiler_r"
                                     value="combi_boiler_r"
                                     checked={field.value === 'combi_boiler_r'}
-                                    name="boiler_replace"
+                                    name="replace_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('replace_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="combi_boiler_r" className='quote-options-label quote-cc'>
                                     <img src={CombiBoiler} alt='Combi Boiler' />
@@ -36,9 +39,12 @@ export default function BoilerFirst(props: any) {
                                     id="regular_boiler_r"
                                     value="regular_boiler_r"
                                     checked={field.value === 'regular_boiler_r'}
-                                    name="boiler_replace"
+                                    name="replace_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('replace_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="regular_boiler_r" className='quote-options-label quote-cc'>
                                     <img src={RegularBoiler} alt='Regular Boiler' />
@@ -52,9 +58,12 @@ export default function BoilerFirst(props: any) {
                                     id="system_boiler_r"
                                     value="system_boiler_r"
                                     checked={field.value === 'system_boiler_r'}
-                                    name="boiler_replace"
+                                    name="replace_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('replace_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="system_boiler_r" className='quote-options-label quote-cc'>
                                     <img src={SystemBoiler} alt='system boiler' />

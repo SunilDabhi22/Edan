@@ -20,7 +20,10 @@ export default function CurrentBoilerWorking(props: any) {
                                     checked={field.value === 'yes_boiler_working'}
                                     name="current_boiler_working"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('current_boiler_working', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="yes_boiler_working" className='quote-options-label quote-cc'>
                                     <img src={TickIcon} alt='Yes' />
@@ -36,7 +39,10 @@ export default function CurrentBoilerWorking(props: any) {
                                     checked={field.value === 'no_boiler_working'}
                                     name="current_boiler_working"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('current_boiler_working', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="no_boiler_working" className='quote-options-label quote-cc'>
                                     <img src={CrossIcon} alt='No' />

@@ -20,7 +20,10 @@ export default function FlueExit(props: any) {
                                     checked={field.value === 'external_wall'}
                                     name="flue_exit"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('flue_exit', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="external_wall" className='quote-options-label quote-cc'>
                                     <img src={ExternalWall} alt='External Wall' />
@@ -36,7 +39,10 @@ export default function FlueExit(props: any) {
                                     checked={field.value === 'roof'}
                                     name="flue_exit"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('flue_exit', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="roof" className='quote-options-label quote-cc'>
                                     <img src={Roof} alt='Roof' />

@@ -23,7 +23,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'semi_detached'}
                                     name="property_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('property_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="semi_detached" className='quote-options-label quote-cc'>
                                     <img src={SemiDetached} alt='Semi Detached' />
@@ -39,7 +42,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'detached'}
                                     name="property_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('property_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="detached" className='quote-options-label quote-cc'>
                                     <img src={Detached} alt='Detached' />
@@ -55,7 +61,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'terraced'}
                                     name="property_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('property_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="terraced" className='quote-options-label quote-cc'>
                                     <img src={Terraced} alt='terraced' />
@@ -71,7 +80,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'bungalow'}
                                     name="property_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('property_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="bungalow" className='quote-options-label quote-cc'>
                                     <img src={Bungalow} alt='bungalow' />
@@ -87,7 +99,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'flat_apart'}
                                     name="property_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('property_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="flat_apart" className='quote-options-label quote-cc'>
                                     <img src={FlatApartment} alt='flat_apart' />

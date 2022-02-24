@@ -20,7 +20,10 @@ export default function MountedWall(props: any) {
                                     checked={field.value === 'wall_mounted'}
                                     name="boiler_mounted"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('boiler_mounted', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="wall_mounted" className='quote-options-label quote-cc'>
                                     <img src={WallMounted} alt='No' />
@@ -36,7 +39,10 @@ export default function MountedWall(props: any) {
                                     checked={field.value === 'floor_mounted'}
                                     name="boiler_mounted"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('boiler_mounted', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="floor_mounted" className='quote-options-label quote-cc'>
                                     <img src={FloorMounted} alt='Yes' />

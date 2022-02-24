@@ -19,7 +19,10 @@ export default function Radiators(props: any) {
                                     checked={field.value === 'rad_0_5'}
                                     name="radiators"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('radiators', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="rad_0_5" className='quote-options-label quote-cc'>
                                     <img src={RadiatorsImg} alt='Radiators' />
@@ -35,7 +38,10 @@ export default function Radiators(props: any) {
                                     checked={field.value === 'rad_6_9'}
                                     name="radiators"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('radiators', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="rad_6_9" className='quote-options-label quote-cc'>
                                     <img src={RadiatorsImg} alt='Radiators' />
@@ -51,7 +57,10 @@ export default function Radiators(props: any) {
                                     checked={field.value === 'rad_10_13'}
                                     name="radiators"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('radiators', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="rad_10_13" className='quote-options-label quote-cc'>
                                     <img src={RadiatorsImg} alt='Radiators' />
@@ -67,7 +76,10 @@ export default function Radiators(props: any) {
                                     checked={field.value === 'red_14_16'}
                                     name="radiators"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('radiators', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="red_14_16" className='quote-options-label quote-cc'>
                                     <img src={RadiatorsImg} alt='Radiators' />
@@ -83,7 +95,10 @@ export default function Radiators(props: any) {
                                     checked={field.value === 'rad_17_plus'}
                                     name="radiators"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('radiators', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="rad_17_plus" className='quote-options-label quote-cc'>
                                     <img src={RadiatorsImg} alt='Radiators' />

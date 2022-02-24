@@ -22,7 +22,10 @@ export default function NewBoilerPlace(props: any) {
                                     checked={field.value === 'same_room'}
                                     name="new_boiler_place"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('new_boiler_place', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="same_room" className='quote-options-label quote-cc'>
                                     <img src={SameRoomImg} alt='Within same room' />
@@ -38,7 +41,10 @@ export default function NewBoilerPlace(props: any) {
                                     checked={field.value === 'same_floor'}
                                     name="new_boiler_place"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('new_boiler_place', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="same_floor" className='quote-options-label quote-cc'>
                                     <img src={OnSameFloor} alt='On same floor' />
@@ -54,7 +60,10 @@ export default function NewBoilerPlace(props: any) {
                                     checked={field.value === 'another_floor'}
                                     name="new_boiler_place"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('new_boiler_place', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="another_floor" className='quote-options-label quote-cc'>
                                     <img src={OnAnotherFloor} alt='On another floor/loft' />
@@ -70,7 +79,10 @@ export default function NewBoilerPlace(props: any) {
                                     checked={field.value === 'other_place'}
                                     name="new_boiler_place"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('new_boiler_place', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="other_place" className='quote-options-label quote-cc'>
                                     <img src={OtherRoom} alt='Other' />

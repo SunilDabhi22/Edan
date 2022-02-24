@@ -44,9 +44,9 @@ export default function FAQSection(props: any) {
                                 <Accordion.Item eventKey="3">
                                     <Accordion.Header>Who will be fitting my new boiler?</Accordion.Header>
                                     <Accordion.Body>
-                                        <p>Simply put, a local, Heatable certified Gas Safe expert.</p>
+                                        <p>Simply put, a local, Edan group certified Gas Safe expert.</p>
                                         <p>We support and manage a network of 500+ heating engineers all over the UK, so, no matter where you live, we're local.</p>
-                                        <p>In order to fit new boilers for Heatable, each and every engineer has to go through a strict onboarding process which checks their background, technical ability and qualifications. If they don't meet our high standards, they aren't allowed in.</p>
+                                        <p>In order to fit new boilers for Edan Group, each and every engineer has to go through a strict onboarding process which checks their background, technical ability and qualifications. If they don't meet our high standards, they aren't allowed in.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="4">
@@ -62,7 +62,7 @@ export default function FAQSection(props: any) {
                                     <Accordion.Body>
                                         <p>Kind of, when you compare it to the traditional way.</p>
                                         <p>We knew that people wanted a faster solution to fitting a new boiler so we took several steps away from the long, sometimes frustrating process of fitting boilers and bring a new way to do it, faster and more efficient. </p>
-                                        <p>Tech has transformed so many industries for the better. Takeaways, Deliveroo. Hotels, Airbnb. Heatable is Uber, for boilers.</p>
+                                        <p>Tech has transformed so many industries for the better. Takeaways, Deliveroo. Hotels, Airbnb. Edan Group is Uber, for boilers.</p>
                                         <p>Fixed online quotes, no salespeople needed and next day installations - it's the best way to buy the thing you need for you and your home.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>

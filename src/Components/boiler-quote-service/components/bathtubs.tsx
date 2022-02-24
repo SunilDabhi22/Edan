@@ -22,7 +22,10 @@ export default function Bathtubs(props: any) {
                                     checked={field.value === 'no_bathtubs'}
                                     name="bathtubs"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('bathtubs', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="no_bathtubs" className='quote-options-label quote-cc'>
                                     <img src={CrossImg} alt='No Bathtubs' />
@@ -38,7 +41,10 @@ export default function Bathtubs(props: any) {
                                     checked={field.value === 'one_bathtubs'}
                                     name="bathtubs"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('bathtubs', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="one_bathtubs" className='quote-options-label quote-cc'>
                                     <img src={OneBathtub} alt='One Bathtubs' />
@@ -54,7 +60,10 @@ export default function Bathtubs(props: any) {
                                     checked={field.value === 'two_bathtubs'}
                                     name="bathtubs"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('bathtubs', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="two_bathtubs" className='quote-options-label quote-cc'>
                                     <img src={TwoBathtubs} alt='Two Bathtubs' />
@@ -70,7 +79,10 @@ export default function Bathtubs(props: any) {
                                     checked={field.value === 'three_plus_bathtubs'}
                                     name="bathtubs"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('bathtubs', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="three_plus_bathtubs" className='quote-options-label quote-cc'>
                                     <img src={ThreeBathtubs} alt='Three Bathtubs' />

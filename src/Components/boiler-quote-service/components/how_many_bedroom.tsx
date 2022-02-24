@@ -23,7 +23,10 @@ export default function Bedrooms(props: any) {
                                     checked={field.value === 'one_bed'}
                                     name="how_many_bedrooms"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('how_many_bedrooms', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="one_bed" className='quote-options-label quote-cc'>
                                     <img src={OneBedroom} alt='One Bed' />
@@ -39,7 +42,10 @@ export default function Bedrooms(props: any) {
                                     checked={field.value === 'two_bed'}
                                     name="how_many_bedrooms"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('how_many_bedrooms', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="two_bed" className='quote-options-label quote-cc'>
                                     <img src={TwoBedroom} alt='Two Bed' />
@@ -55,7 +61,10 @@ export default function Bedrooms(props: any) {
                                     checked={field.value === 'three_bed'}
                                     name="how_many_bedrooms"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('how_many_bedrooms', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="three_bed" className='quote-options-label quote-cc'>
                                     <img src={ThreeBedroom} alt='Three Bed' />
@@ -71,7 +80,10 @@ export default function Bedrooms(props: any) {
                                     checked={field.value === 'four_bed'}
                                     name="how_many_bedrooms"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('how_many_bedrooms', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="four_bed" className='quote-options-label quote-cc'>
                                     <img src={FourBedroom} alt='Four Bed' />
@@ -87,7 +99,10 @@ export default function Bedrooms(props: any) {
                                     checked={field.value === 'five_plus_bed'}
                                     name="how_many_bedrooms"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('how_many_bedrooms', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="five_plus_bed" className='quote-options-label quote-cc'>
                                     <img src={FivePlusBedroom} alt='five_plus_bed' />

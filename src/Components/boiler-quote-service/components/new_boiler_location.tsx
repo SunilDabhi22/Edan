@@ -20,7 +20,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'no_new_loc'}
                                     name="boiler_new_location"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('boiler_new_location', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="no_new_loc" className='quote-options-label quote-cc'>
                                     <img src={CrossIcon} alt='No' />
@@ -36,7 +39,10 @@ export default function BoilerFirst(props: any) {
                                     checked={field.value === 'yes_new_loc'}
                                     name="boiler_new_location"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('boiler_new_location', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="yes_new_loc" className='quote-options-label quote-cc'>
                                     <img src={TickIcon} alt='Yes' />

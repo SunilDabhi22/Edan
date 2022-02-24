@@ -11,7 +11,7 @@ export default function BoilerFirst(props: any) {
             <h3>What type of boiler do you currently have?</h3>
             <div className='quote-options'>
                 <Field
-                    name="boiler_type"
+                    name="current_boiler"
                     render={({ field }: any) => (
                         <>
                             <div className="radio-item">
@@ -20,9 +20,12 @@ export default function BoilerFirst(props: any) {
                                     id="combi_boiler"
                                     value="combi_boiler"
                                     checked={field.value === 'combi_boiler'}
-                                    name="boiler_type"
+                                    name="current_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('current_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="combi_boiler" className='quote-options-label quote-cc'>
                                     <img src={CombiBoiler} alt='Combi Boiler' />
@@ -36,9 +39,12 @@ export default function BoilerFirst(props: any) {
                                     id="regular_boiler"
                                     value="regular_boiler"
                                     checked={field.value === 'regular_boiler'}
-                                    name="boiler_type"
+                                    name="current_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('current_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="regular_boiler" className='quote-options-label quote-cc'>
                                     <img src={RegularBoiler} alt='Regular Boiler' />
@@ -52,9 +58,12 @@ export default function BoilerFirst(props: any) {
                                     id="system_boiler"
                                     value="system_boiler"
                                     checked={field.value === 'system_boiler'}
-                                    name="boiler_type"
+                                    name="current_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('current_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="system_boiler" className='quote-options-label quote-cc'>
                                     <img src={SystemBoiler} alt='system boiler' />
@@ -68,9 +77,12 @@ export default function BoilerFirst(props: any) {
                                     id="back_boiler"
                                     value="back_boiler"
                                     checked={field.value === 'back_boiler'}
-                                    name="boiler_type"
+                                    name="current_boiler"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('current_boiler', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="back_boiler" className='quote-options-label quote-cc'>
                                     <img src={BackBoiler} alt='other' />

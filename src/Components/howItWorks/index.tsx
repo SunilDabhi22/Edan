@@ -57,7 +57,7 @@ export default function HowItWorksPage(props: any) {
                                 <div className='qa_title'>
                                     <img src={Step2} alt='' /> <h4>You pick</h4>
                                 </div>
-                                <p>On a date that suits you, using a local, Heatable certified engineer.</p>
+                                <p>On a date that suits you, using a local, Edan group certified engineer.</p>
                                 <p>They'll bring the boiler and all of the materials with them, and, once the installation is complete, we'll get it registered with Gas Safe and we'll even register your new boiler with the manufacturer too.</p>
                                 <p>Every installation gets our exclusive 12 month workmanship warranty, so if there's an issue, it won't be an issue.</p>
                             </Col>
@@ -105,7 +105,7 @@ export default function HowItWorksPage(props: any) {
                         <Col md={8}>
                             <div className='right-sec-detail'>
                                 <h5>We work with and support a network of 500+ engineers, all over the UK.</h5>
-                                <p>"As a self-employed engineer, working for Heatable has been a great boost. It's enabled me to stay busy and booked up. Using their app, I'm able to set availability for days that I'm quiet, and they quickly fill them up with jobs in my area. It's a great business model, and I can see why it's so appealing to their customers."</p>
+                                <p>"As a self-employed engineer, working for Edan group has been a great boost. It's enabled me to stay busy and booked up. Using their app, I'm able to set availability for days that I'm quiet, and they quickly fill them up with jobs in my area. It's a great business model, and I can see why it's so appealing to their customers."</p>
                             </div>
                         </Col>
                     </Row>

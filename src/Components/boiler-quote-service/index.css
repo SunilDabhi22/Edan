@@ -233,9 +233,10 @@
   font-weight: 500;
 }
 
+
 .boiler_quote_prod .boiler_prod_item {
   background: #009640;
-  padding: 3rem 0;
+  padding: 3rem;
   color: #ffffff;
   margin: 3rem 0;
 }
@@ -283,14 +284,10 @@
   gap: 20px;
 }
 
-.boiler_quote_prod .boiler_prod_item .prod_right .prod_img {
-  padding: 0 4rem;
-}
-
 .boiler_quote_prod .boiler_prod_item .prod_right .prod_img img {
   width: 100%;
-  max-width: 270px;
-  min-width: 270px;
+  max-width: 400px;
+  min-width: 400px;
   box-sizing: border-box;
 }
 
@@ -389,7 +386,6 @@
   span
   .prod_real_price {
   font-size: 1.8rem;
-  letter-spacing: 2px;
   font-weight: 600;
 }
 
@@ -413,7 +409,6 @@
   span
   .prod_month_price {
   font-size: 1.8rem;
-  letter-spacing: 2px;
   font-weight: 600;
   text-align: right;
 }
@@ -515,7 +510,7 @@
   text-decoration: underline;
 }
 
-.answer_section .refresh_btn_dark svg{
+.answer_section .refresh_btn_dark svg {
   width: 25px;
   display: block;
 }

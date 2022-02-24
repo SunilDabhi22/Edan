@@ -49,7 +49,7 @@ export default function AboutPage(props: any) {
                     <Row>
                         <Col xs={12}>
                             <p className='about_content'>
-                                <strong>We pulled the plug on Heatable v1,</strong> went back to the drawing board, forgot we didn't have a drawing board, bought one and then immediately went back to work figuring out how we could change the boiler industry for good and for the better.                             </p>
+                                <strong>We pulled the plug on Edan Group,</strong> went back to the drawing board, forgot we didn't have a drawing board, bought one and then immediately went back to work figuring out how we could change the boiler industry for good and for the better.                             </p>
 
                         </Col>
                     </Row>

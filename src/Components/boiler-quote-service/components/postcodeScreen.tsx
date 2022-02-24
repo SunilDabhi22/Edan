@@ -11,7 +11,9 @@ export default function CalculateQuote(props: any) {
             <Field
                 name="postcode"
                 render={({ field /* { name, value, onChange, onBlur } */ }: any) => (
-                    <input {...field} type="text" className='postcode_input' placeholder="e.g SW5" />
+                    <input {...field} type="text" onChange={(e) => {
+                        props.setFieldValue('postcode', e.target.value)
+                    }} className='postcode_input' placeholder="e.g SW5" />
                 )}
             />
             <button type='submit' className='submit_btn'>

@@ -21,7 +21,10 @@ export default function ShowerCubicles(props: any) {
                                     checked={field.value === 'no_shower_cubicles'}
                                     name="shower_cubicles"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('shower_cubicles', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="no_shower_cubicles" className='quote-options-label quote-cc'>
                                     <img src={CrossImg} alt='No Shower Cubicles' />
@@ -37,7 +40,10 @@ export default function ShowerCubicles(props: any) {
                                     checked={field.value === 'one_shower_cubicle'}
                                     name="shower_cubicles"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('shower_cubicles', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="one_shower_cubicle" className='quote-options-label quote-cc'>
                                     <img src={ShowerOne} alt='One Shower Cubicle' />
@@ -53,7 +59,10 @@ export default function ShowerCubicles(props: any) {
                                     checked={field.value === 'two_plus_shower_cubicles'}
                                     name="shower_cubicles"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('shower_cubicles', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="two_plus_shower_cubicles" className='quote-options-label quote-cc'>
                                     <img src={ShowerTwo} alt='Two+ Shower Cubicles' />

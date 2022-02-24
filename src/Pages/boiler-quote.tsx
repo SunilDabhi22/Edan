@@ -7,10 +7,11 @@ import Footer from '../Components/footer';
 export default function BoilerQuote(props: any) {
 
     const [result, setResult] = useState(false);
+    const [data, setData] = useState(null);
 
     const handleQuote = (values: any, status: boolean) => {
-        console.log("values-----------------", values)
         setResult(status);
+        setData(values)
     }
 
     return (
@@ -18,7 +19,7 @@ export default function BoilerQuote(props: any) {
             <Header />
             {result ?
                 <>
-                    <QuoteResult />
+                    <QuoteResult data={data} />
                     <Footer />
                 </>
                 :

@@ -73,68 +73,68 @@ export default function BoilerQuoteService(props: any) {
                         }
 
                         {['other_place', 'lpg'].includes(isRadioVal) &&
-                            <BoilerSection2 {...props} handleRestart={handleRestart} />
+                            <BoilerSection2 setFieldValue={setFieldValue} {...props} handleRestart={handleRestart} />
                         }
 
                         {['other_boiler', 'regular_boiler_r', 'system_boiler_r'].includes(isRadioVal) &&
-                            <RestartSection {...props} handleRestart={handleRestart} />
+                            <RestartSection setFieldValue={setFieldValue} {...props} handleRestart={handleRestart} />
                         }
 
                         {isRadioVal === 'gas' &&
-                            <BoilerType {...props} handleChangeRadio={handleChangeRadio} />
+                            <BoilerType setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['combi_boiler', 'regular_boiler', 'system_boiler', 'back_boiler'].includes(isRadioVal) &&
-                            <ReplaceBoiler {...props} handleChangeRadio={handleChangeRadio} />
+                            <ReplaceBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['combi_boiler_r'].includes(isRadioVal) &&
-                            <NewLocationBoiler {...props} handleChangeRadio={handleChangeRadio} />
+                            <NewLocationBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['no_new_loc'].includes(isRadioVal) &&
-                            <WallMounted {...props} handleChangeRadio={handleChangeRadio} />
+                            <WallMounted setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['yes_new_loc'].includes(isRadioVal) &&
-                            <NewBoilerPlace {...props} handleChangeRadio={handleChangeRadio} />
+                            <NewBoilerPlace setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['wall_mounted', 'floor_mounted', 'same_room', 'same_floor', 'another_floor'].includes(isRadioVal) &&
-                            <WorkingBoiler {...props} handleChangeRadio={handleChangeRadio} />
+                            <WorkingBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['yes_boiler_working', 'no_boiler_working'].includes(isRadioVal) &&
-                            <PropertyType {...props} handleChangeRadio={handleChangeRadio} />
+                            <PropertyType setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['semi_detached', 'detached', 'terraced', 'bungalow', 'flat_apart'].includes(isRadioVal) &&
-                            <HowManyBedrooms {...props} handleChangeRadio={handleChangeRadio} />
+                            <HowManyBedrooms setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['one_bed', 'two_bed', 'three_bed', 'four_bed', 'five_plus_bed'].includes(isRadioVal) &&
-                            <Radiators {...props} handleChangeRadio={handleChangeRadio} />
+                            <Radiators setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['rad_0_5', 'rad_6_9', 'rad_10_13', 'red_14_16', 'rad_17_plus'].includes(isRadioVal) &&
-                            <Bathtubs {...props} handleChangeRadio={handleChangeRadio} />
+                            <Bathtubs setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['no_bathtubs', 'one_bathtubs', 'two_bathtubs', 'three_plus_bathtubs'].includes(isRadioVal) &&
-                            <ShowerCubicles {...props} handleChangeRadio={handleChangeRadio} />
+                            <ShowerCubicles setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['no_shower_cubicles', 'two_plus_shower_cubicles', 'one_shower_cubicle'].includes(isRadioVal) &&
-                            <FlueExit {...props} handleChangeRadio={handleChangeRadio} />
+                            <FlueExit setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['roof'].includes(isRadioVal) &&
-                            <RoofType {...props} handleChangeRadio={handleChangeRadio} />
+                            <RoofType setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
                         {['pitched', 'flat', 'external_wall'].includes(isRadioVal) &&
                             // !calQuote &&
-                            <PostCodeScr {...props} />
+                            <PostCodeScr setFieldValue={setFieldValue} {...props} />
                         }
 
                         {/* {calQuote &&

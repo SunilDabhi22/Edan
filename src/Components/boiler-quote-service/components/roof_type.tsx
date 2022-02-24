@@ -20,7 +20,10 @@ export default function RoofType(props: any) {
                                     checked={field.value === 'pitched'}
                                     name="roof_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('roof_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="pitched" className='quote-options-label quote-cc'>
                                     <img src={PitchedImg} alt='Pitched' />
@@ -36,7 +39,10 @@ export default function RoofType(props: any) {
                                     checked={field.value === 'flat'}
                                     name="roof_type"
                                     type="radio"
-                                    onChange={(e) => props.handleChangeRadio(e)}
+                                    onChange={(e) => {
+                                        props.handleChangeRadio(e)
+                                        props.setFieldValue('roof_type', e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="flat" className='quote-options-label quote-cc'>
                                     <img src={FlatImg} alt='flat' />
