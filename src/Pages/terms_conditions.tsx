@@ -14,7 +14,7 @@ export default function Contact(props: any) {
                         <Col md={12}>
                             <h1 className='terms_title'>Terms & Conditions</h1>
                             <div className='terms_content'>
-                                <p>Waiting for content...</p>
+                                <p>Working on content...</p>
                             </div>
                         </Col>
                     </Row>

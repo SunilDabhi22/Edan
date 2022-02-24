@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-self: center;
+  background-attachment: fixed;
 }
 
 .about_main .about_first_sec p.about_content {
@@ -77,6 +78,7 @@
   display: flex;
   align-items: center;
   justify-self: center;
+  background-attachment: fixed;
   padding: 5rem 0;
 }
 
