@@ -528,3 +528,57 @@
 .answer_section .answer_list li span {
   font-weight: 500;
 }
+
+.request-callback .form-input label{
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.request-callback .form-input input{
+  /* margin-bottom: 1rem; */
+  border: 0;
+  background: #e4e4e4;
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.request-callback .form-input textarea{
+  border: 0;
+  background: #e4e4e4;
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.request-callback .form-input span.form-error{
+  color: #bf2c25;
+  font-size: 0.7rem;
+}
+
+.request-callback .form-note{
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #949494;
+}
+
+.request-callback .form-btn button{
+  background-color: #009640;
+  color: #ffffff;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 0.5rem 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.request-callback .form-btn button:hover{
+  background-color: #000000;
+  color: #ffffff;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 0.5rem 2.5rem;
+  margin-bottom: 1rem;
+}

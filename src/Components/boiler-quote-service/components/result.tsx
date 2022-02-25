@@ -1,6 +1,6 @@
 import '../index.css';
 import ProductImage1 from '../../../Assets/product/ETEC_S_FRONT_RET-3_20n-053 E-Tec on trans bg.png';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
 import { ShieldIcon, RefreshIcon } from '../../../SharedComponents/sharedIcons';
 import HybridImg from '../assets/hybrid.png';
 import RangeTopperImg from '../assets/range_topper.png';
@@ -12,21 +12,16 @@ import LongLifeImg from '../assets/long-life.png';
 import UltraEffiecientImg from '../assets/ultra-efficient.png';
 import EnergySaverImg from '../assets/energy-saver.png';
 import GermanEfficientImg from '../assets/german-efficient.png';
+import { useState } from 'react';
+import { Formik } from 'formik';
 
 export default function QuoteResult(props: any) {
 
-    const boilerProduct = [
-        {
-            title: 'Perfect Match',
-            image: ProductImage1,
-            name: 'Worcester Bosch Greenstar 400030kW',
-            price: '2,195'
-        }
-    ]
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-    const { bathtubs, boiler_mounted, boiler_new_location, current_boiler, current_boiler_working, flue_exit,
-        fuel_power, how_many_bedrooms, postcode, property_type, radiators, replace_boiler, roof_type, shower_cubicles, } = props?.data;
 
     return (
         <div className='boiler_quote_prod'>
@@ -76,7 +71,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -499,23 +494,23 @@ export default function QuoteResult(props: any) {
                         </Col>
                         <Col xs={12} sm={8}>
                             <div className='answer_list'>
-                                <li>Postcode <span>{postcode || '-'}</span></li>
+                                <li>Postcode <span>{props?.data?.postcode || '-'}</span></li>
                                 <li>Current Boiler
                                     <span>
                                         {
-                                            current_boiler === 'combi_boiler' ? "Combi Boiler" :
-                                                current_boiler === 'regular_boiler' ? "Regular Boiler" :
-                                                    current_boiler === 'system_boiler' ? "System Boiler" :
-                                                        current_boiler === 'back_boiler' ? "Back Boiler" :
+                                            props?.data?.current_boiler === 'combi_boiler' ? "Combi Boiler" :
+                                                props?.data?.current_boiler === 'regular_boiler' ? "Regular Boiler" :
+                                                    props?.data?.current_boiler === 'system_boiler' ? "System Boiler" :
+                                                        props?.data?.current_boiler === 'back_boiler' ? "Back Boiler" :
                                                             "-"
                                         }
                                     </span></li>
                                 <li>Replacement
                                     <span>
                                         {
-                                            replace_boiler === 'combi_boiler_r' ? "Combi Boiler" :
-                                                replace_boiler === 'regular_boiler_r' ? "Regular Boiler" :
-                                                    replace_boiler === 'system_boiler_r' ? "System Boiler" :
+                                            props?.data?.replace_boiler === 'combi_boiler_r' ? "Combi Boiler" :
+                                                props?.data?.replace_boiler === 'regular_boiler_r' ? "Regular Boiler" :
+                                                    props?.data?.replace_boiler === 'system_boiler_r' ? "System Boiler" :
                                                         "-"
                                         }
                                     </span>
@@ -523,8 +518,8 @@ export default function QuoteResult(props: any) {
                                 <li>Want Boiler Moving?
                                     <span>
                                         {
-                                            boiler_new_location === "no_new_loc" ? "No, I don't" :
-                                                boiler_new_location === "yes_new_loc" ? "Yes, I do" :
+                                            props?.data?.boiler_new_location === "no_new_loc" ? "No, I don't" :
+                                                props?.data?.boiler_new_location === "yes_new_loc" ? "Yes, I do" :
                                                     '-'
                                         }
                                     </span>
@@ -532,11 +527,11 @@ export default function QuoteResult(props: any) {
                                 <li>House Type
                                     <span>
                                         {
-                                            property_type === "semi_detached" ? "Semi-Detached" :
-                                                property_type === "detached" ? "Detached" :
-                                                    property_type === "terraced" ? "Terraced" :
-                                                        property_type === "bungalow" ? "Bungalow" :
-                                                            property_type === "flat_apart" ? "Flat/Apartment" :
+                                            props?.data?.property_type === "semi_detached" ? "Semi-Detached" :
+                                                props?.data?.property_type === "detached" ? "Detached" :
+                                                    props?.data?.property_type === "terraced" ? "Terraced" :
+                                                        props?.data?.property_type === "bungalow" ? "Bungalow" :
+                                                            props?.data?.property_type === "flat_apart" ? "Flat/Apartment" :
                                                                 '-'
                                         }
                                     </span>
@@ -544,11 +539,11 @@ export default function QuoteResult(props: any) {
                                 <li>Bedrooms
                                     <span>
                                         {
-                                            how_many_bedrooms === "one_bed" ? "1" :
-                                                how_many_bedrooms === "two_bed" ? "2" :
-                                                    how_many_bedrooms === "three_bed" ? "3" :
-                                                        how_many_bedrooms === "four_bed" ? "4" :
-                                                            how_many_bedrooms === "five_plus_bed" ? "5+" :
+                                            props?.data?.how_many_bedrooms === "one_bed" ? "1" :
+                                                props?.data?.how_many_bedrooms === "two_bed" ? "2" :
+                                                    props?.data?.how_many_bedrooms === "three_bed" ? "3" :
+                                                        props?.data?.how_many_bedrooms === "four_bed" ? "4" :
+                                                            props?.data?.how_many_bedrooms === "five_plus_bed" ? "5+" :
                                                                 '-'
                                         }
                                     </span>
@@ -556,10 +551,10 @@ export default function QuoteResult(props: any) {
                                 <li>Bathtubs
                                     <span>
                                         {
-                                            bathtubs === "no_bathtubs" ? "No Bathtubs" :
-                                                bathtubs === "one_bathtubs" ? "1" :
-                                                    bathtubs === "two_bathtubs" ? "2" :
-                                                        bathtubs === "three_plus_bathtubs" ? "3+" :
+                                            props?.data?.bathtubs === "no_bathtubs" ? "No Bathtubs" :
+                                                props?.data?.bathtubs === "one_bathtubs" ? "1" :
+                                                    props?.data?.bathtubs === "two_bathtubs" ? "2" :
+                                                        props?.data?.bathtubs === "three_plus_bathtubs" ? "3+" :
                                                             '-'
                                         }
                                     </span>
@@ -567,17 +562,17 @@ export default function QuoteResult(props: any) {
                                 <li>Showers
                                     <span>
                                         {
-                                            shower_cubicles === "no_shower_cubicles" ? "No Shower Cubicles" :
-                                                shower_cubicles === "one_shower_cubicle" ? "1" :
-                                                    shower_cubicles === "two_plus_shower_cubicles" ? "2+" :
+                                            props?.data?.shower_cubicles === "no_shower_cubicles" ? "No Shower Cubicles" :
+                                                props?.data?.shower_cubicles === "one_shower_cubicle" ? "1" :
+                                                    props?.data?.shower_cubicles === "two_plus_shower_cubicles" ? "2+" :
                                                         '-'
                                         }
                                     </span>
                                 </li>
                                 <li>Flue Exit <span>
                                     {
-                                        flue_exit === "external_wall" ? "External Wall" :
-                                            flue_exit === "roof" ? "Roof" :
+                                        props?.data?.flue_exit === "external_wall" ? "External Wall" :
+                                            props?.data?.flue_exit === "roof" ? "Roof" :
                                                 '-'
                                     }
                                 </span>
@@ -587,6 +582,143 @@ export default function QuoteResult(props: any) {
                     </Row>
                 </Container>
             </div>
+
+            <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                centered
+                keyboard={false}
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>Request callback</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Formik
+                        initialValues={
+                            {
+                                fullName: '',
+                                contactNo: '',
+                                email: '',
+                                message: '',
+                            }
+                        }
+                        validate={values => {
+                            const errors: any = {};
+                            if (!values.fullName) {
+                                errors.fullName = 'Full Name is Required';
+                            }
+                            if (!values.contactNo) {
+                                errors.contactNo = 'Contact Number is Required';
+                            }
+                            if (!values.email) {
+                                errors.email = 'Email is Required';
+                            }
+                            if (!values.message) {
+                                errors.message = 'Message is Required';
+                            }
+                            return errors;
+                        }}
+                        onSubmit={(values, { setSubmitting }) => {
+                            setTimeout(() => {
+
+                                setSubmitting(false);
+                            }, 400);
+                        }}
+                    >
+                        {({
+                            values,
+                            errors,
+                            touched,
+                            handleChange,
+                            handleBlur,
+                            handleSubmit,
+                            isSubmitting,
+                            /* and other goodies */
+                        }) => (
+                            <form onSubmit={handleSubmit} className='request-callback'>
+                                <Container>
+                                    <Row className='align-items-center'>
+                                        <Col md={6} xs={12}>
+                                            <div className='form-input'>
+                                                <label>Full name</label>
+                                                <input
+                                                    type="text"
+                                                    name="fullName"
+                                                    placeholder='e.g. John Doe'
+                                                    onChange={handleChange}
+                                                    value={values.fullName}
+                                                />
+                                                <span className='form-error'>
+                                                    {errors.fullName}
+                                                </span>
+                                            </div>
+                                        </Col>
+
+                                        <Col md={6} xs={12}>
+                                            <div className='form-input'>
+                                                <label>Contact number</label>
+                                                <input
+                                                    type="text"
+                                                    name="contactNumber"
+                                                    placeholder='e.g. 0123 123 1234'
+                                                    onChange={handleChange}
+                                                    value={values.contactNo}
+                                                />
+                                                <span className='form-error'>
+                                                    {errors.contactNo}
+                                                </span>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row className='align-items-center'>
+                                        <Col md={12} xs={12}>
+                                            <div className='form-input'>
+                                                <label>Email address</label>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    placeholder='e.g. email@example.com'
+                                                    onChange={handleChange}
+                                                    value={values.email}
+                                                />
+                                                <span className='form-error'>
+                                                    {errors.email}
+                                                </span>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row className='align-items-center'>
+                                        <Col md={12} xs={12}>
+                                            <div className='form-input'>
+                                                <label>Message</label>
+                                                <textarea
+                                                    name="message"
+                                                    rows={4}
+                                                    placeholder='Enter message here'
+                                                    onChange={handleChange}
+                                                    value={values.message}
+                                                />
+                                                <span className='form-error'>
+                                                    {errors.message}
+                                                </span>
+                                            </div>
+                                        </Col>
+
+                                        <span className='form-note'>Once submitted, a member of our team will be in touch ASAP.</span>
+
+                                        <div className='form-btn'>
+                                            <button type="submit">
+                                                Send
+                                            </button>
+                                        </div>
+                                    </Row>
+                                </Container>
+                            </form>
+                        )}
+                    </Formik>
+                </Modal.Body>
+            </Modal>
         </div>
     );
 } 
