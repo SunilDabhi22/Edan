@@ -14,6 +14,7 @@ import EnergySaverImg from '../assets/energy-saver.png';
 import GermanEfficientImg from '../assets/german-efficient.png';
 import { useState } from 'react';
 import { Formik } from 'formik';
+import emailjs from 'emailjs-com';
 
 export default function QuoteResult(props: any) {
 
@@ -116,7 +117,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +162,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +206,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +251,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +296,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -340,7 +341,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -385,7 +386,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -430,7 +431,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -475,7 +476,7 @@ export default function QuoteResult(props: any) {
                                     </div>
 
                                     <div className='prod_submit'>
-                                        <button type='button'>Send Quote</button>
+                                        <button type='button' onClick={handleShow}>Request callback</button>
                                     </div>
                                 </div>
                             </div>
@@ -620,10 +621,12 @@ export default function QuoteResult(props: any) {
                             return errors;
                         }}
                         onSubmit={(values, { setSubmitting }) => {
-                            setTimeout(() => {
-
-                                setSubmitting(false);
-                            }, 400);
+                            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', "sunil hiiii", 'YOUR_USER_ID')
+                                .then((result) => {
+                                    window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+                                }, (error) => {
+                                    console.log(error.text);
+                                });
                         }}
                     >
                         {({
