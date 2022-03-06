@@ -176,50 +176,6 @@ export default function QuoteResult(props: any) {
                     <Row style={{ alignItems: 'center' }}>
                         <Col sm={4} xs={12}>
                             <div className='prod_left'>
-                                <h3>All-British Boiler</h3>
-                                <p>A popular, UK-built combi</p>
-
-                                <span><ShieldIcon /> 10 year warranty</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={AllBritishImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Ideal<br /> Logic+ 35kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                {/* <span className='price_cut'>Was <span>£2,295</span></span> */}
-                                                <span className='prod_real_price'>£2,195</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£37.69</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
                                 <h3>Ultra Efficient</h3>
                                 <p>Viessmann's all-new, tech-packed 2021 model</p>
 
