@@ -21,7 +21,109 @@ export default function QuoteResult(props: any) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = (data: any) => {
+        console.log("selected product", data)
+        setShow(true);
+    }
+
+    const boilerItems = [
+        {
+            title: 'Perfect Match',
+            description: 'The all-new benchmark for boilers',
+            guarantee: '10 year guarantee',
+            apr: '2 Years 0% APR',
+            image: PerfectMatchImg,
+            name: 'Worcester Bosch Greenstar 400030kW',
+            price: '2,195',
+            originalPrice: '2,295',
+            monthlyRent: '28.38',
+        },
+        {
+            title: 'Low-Cost Option',
+            description: 'Backed by an exclusive 10 year warranty',
+            guarantee: '10 year guarantee',
+            image: LowCostImg,
+            name: 'Alpha E-Tec28kW',
+            price: '2,195',
+            originalPrice: '2,295',
+            monthlyRent: '28.38',
+        },
+        {
+            title: 'Long Life',
+            description: 'Colossal 13 year warranty',
+            guarantee: '13 year guarantee',
+            apr: '2 Years 0% APR',
+            image: LongLifeImg,
+            name: 'Alpha E-Tec Plus28kW',
+            price: '2,195',
+            originalPrice: '2,295',
+            monthlyRent: '28.38',
+        },
+        {
+            title: 'Ultra Efficient',
+            description: "Viessmann's all-new, tech-packed 2021 model",
+            guarantee: '10 year warranty',
+            apr: '2 Years 0% APR',
+            image: UltraEffiecientImg,
+            name: 'Viessmann Vitodens 100-W 35kW',
+            price: '3,325',
+            originalPrice: '3,375',
+            monthlyRent: '42.99',
+        },
+        {
+            title: 'Compact Size',
+            description: "Designed to fit in kitchen cupboards",
+            guarantee: '10 year guarantee',
+            image: CompactSizeImg,
+            name: 'Worcester Bosch Greenstar CDi Compact 36kW',
+            price: '3,380',
+            monthlyRent: '43.70',
+        },
+        {
+            title: 'Range Topper',
+            description: "Worcester's most powerful, range-topping combi",
+            guarantee: '10 year warranty',
+            apr: '2 Years 0% APR',
+            image: RangeTopperImg,
+            name: 'Worcester Bosch Greenstar 8000 Style 35kW',
+            price: '3,390',
+            originalPrice: '3,590',
+            monthlyRent: '43.83',
+        },
+        {
+            title: 'Hybrid Powerhouse',
+            description: "Insane hot water delivery for larger homes",
+            guarantee: '10 year warranty',
+            apr: '2 Years 0% APR',
+            image: HybridImg,
+            name: 'Viessmann Vitodens 111-W 32kW',
+            price: '4,545',
+            originalPrice: '4,645',
+            monthlyRent: '58.76',
+        },
+        {
+            title: 'German Efficiency',
+            description: "Ultra-efficient and A-rated",
+            guarantee: '10 year warranty',
+            apr: '2 Years 0% APR',
+            image: GermanEfficientImg,
+            name: 'Viessmann Vitodens 050-W 30kW',
+            price: '2,310',
+            originalPrice: '2,450',
+            monthlyRent: '29.87',
+        },
+        {
+            title: 'Energy Saver',
+            description: "Ultra-efficient, A-rated and Google smart controlled",
+            guarantee: '10 year warranty',
+            apr: '2 Years 0% APR',
+            image: EnergySaverImg,
+            name: 'Viessmann Vitodens 050-W30kW & Nest Thermostat',
+            price: '2,390',
+            originalPrice: '2,495',
+            monthlyRent: '30.90',
+        }
+    ]
 
 
     return (
@@ -36,410 +138,54 @@ export default function QuoteResult(props: any) {
                     </Col>
                 </Row>
             </Container>
-            <div className='boiler_prod_item'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Perfect Match</h3>
-                                <p>The all-new benchmark for boilers</p>
 
-                                <span><ShieldIcon /> 10 year guarantee</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={PerfectMatchImg} alt='Product' />
+            {boilerItems.length > 0 && boilerItems.map((e) => (
+                <div className={e.title === 'Perfect Match' ? 'boiler_prod_item' : 'boiler_prod_item light_boiler_ver'}>
+                    <Container fluid>
+                        <Row style={{ alignItems: 'center' }}>
+                            <Col sm={4} xs={12}>
+                                <div className='prod_left'>
+                                    <h3>{e.title}</h3>
+                                    <p>{e.description}</p>
+
+                                    {e.guarantee ? <span><ShieldIcon /> {e.guarantee}</span> : ''}
+                                    {e.apr ? <span><span className='percent_badge'>%</span> {e.apr}</span> : ''}
                                 </div>
-                                <div className='prod_prices'>
-                                    <h4>Worcester Bosch Greenstar 400030kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£2,295</span></span>
-                                                <span className='prod_real_price'>£2,195</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£28.38</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
+                            </Col>
+                            <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
+                                <div className='prod_right'>
+                                    <div className='prod_img'>
+                                        <img src={e.image} alt='Product' />
+                                    </div>
+                                    <div className='prod_prices'>
+                                        <h4>{e.name}</h4>
+                                        <div className='prod_price_box'>
+                                            <span className='dark_line'>Your fixed price (inc. installation)</span>
+                                            <div className='prod_price_discount'>
+                                                <span>
+                                                    {e.originalPrice ?
+                                                        <span className='price_cut'>Was <span>£{e.originalPrice}</span></span> : ""}
+                                                    <span className='prod_real_price'>£{e.price}</span>
+                                                    <span className='prod_note'>Fitted price inc. VAT</span>
+                                                </span>
+                                                <span className='divider'>or</span>
+                                                <span>
+                                                    <span className='prod_month_price'>£{e.monthlyRent}</span>
+                                                    <span className='prod_month_note'>a month & 9.9%APR </span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div className='prod_submit'>
+                                            <button type='button' onClick={() => handleShow(e)}>Request callback</button>
                                         </div>
                                     </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
                                 </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Low-Cost Option</h3>
-                                <p>Backed by an exclusive 10 year warranty</p>
-
-                                <span><ShieldIcon /> 10 year guarantee</span>
-                                {/* <span><span className='percent_badge'>%</span> 2 Years 0% APR</span> */}
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={LowCostImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Alpha <br />E-Tec28kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£2,295</span></span>
-                                                <span className='prod_real_price'>£2,195</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£28.38</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Long Life</h3>
-                                <p>Colossal 13 year warranty</p>
-
-                                <span><ShieldIcon /> 13 year guarantee</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={LongLifeImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Alpha<br /> E-Tec Plus28kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£2,295</span></span>
-                                                <span className='prod_real_price'>£2,195</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£28.38</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Ultra Efficient</h3>
-                                <p>Viessmann's all-new, tech-packed 2021 model</p>
-
-                                <span><ShieldIcon /> 10 year warranty</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={UltraEffiecientImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Viessmann<br /> Vitodens 100-W 35kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£3,375</span></span>
-                                                <span className='prod_real_price'>£3,325</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£42.99</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Compact Size</h3>
-                                <p>Designed to fit in kitchen cupboards</p>
-
-                                <span><ShieldIcon /> 10 year guarantee</span>
-                                {/* <span><span className='percent_badge'>%</span> 2 Years 0% APR</span> */}
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={CompactSizeImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Worcester Bosch Greenstar CDi Compact 36kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                {/* <span className='price_cut'>Was <span>£3,375</span></span> */}
-                                                <span className='prod_real_price'>£3,380</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£43.70</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Range Topper</h3>
-                                <p>Worcester's most powerful, range-topping combi</p>
-
-                                <span><ShieldIcon /> 10 year guarantee</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={RangeTopperImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Worcester Bosch Greenstar 8000 Style 35kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£3,590</span></span>
-                                                <span className='prod_real_price'>£3,390</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£43.83</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Hybrid Powerhouse</h3>
-                                <p>Insane hot water delivery for larger homes</p>
-
-                                <span><ShieldIcon /> 10 year warranty</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={HybridImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Viessmann<br /> Vitodens 111-W 32kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£4,645</span></span>
-                                                <span className='prod_real_price'>£4,545</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£58.76</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>German Efficiency</h3>
-                                <p>Ultra-efficient and A-rated</p>
-
-                                <span><ShieldIcon /> 10 year warranty</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={GermanEfficientImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Viessmann<br /> Vitodens 050-W 30kW</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£2,450</span></span>
-                                                <span className='prod_real_price'>£2,310</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£29.87</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-
-            <div className='boiler_prod_item light_boiler_ver'>
-                <Container fluid>
-                    <Row style={{ alignItems: 'center' }}>
-                        <Col sm={4} xs={12}>
-                            <div className='prod_left'>
-                                <h3>Energy Saver</h3>
-                                <p>Ultra-efficient, A-rated and Google smart controlled</p>
-
-                                <span><ShieldIcon /> 10 year warranty</span>
-                                <span><span className='percent_badge'>%</span> 2 Years 0% APR</span>
-                            </div>
-                        </Col>
-                        <Col sm={8} xs={12} style={{ borderLeft: '2px solid' }}>
-                            <div className='prod_right'>
-                                <div className='prod_img'>
-                                    <img src={EnergySaverImg} alt='Product' />
-                                </div>
-                                <div className='prod_prices'>
-                                    <h4>Viessmann<br /> Vitodens 050-W30kW & Nest Thermostat</h4>
-                                    <div className='prod_price_box'>
-                                        <span className='dark_line'>Your fixed price (inc. installation)</span>
-                                        <div className='prod_price_discount'>
-                                            <span>
-                                                <span className='price_cut'>Was <span>£2,495</span></span>
-                                                <span className='prod_real_price'>£2,390</span>
-                                                <span className='prod_note'>Fitted price inc. VAT</span>
-                                            </span>
-                                            <span className='divider'>or</span>
-                                            <span>
-                                                <span className='prod_month_price'>£30.90</span>
-                                                <span className='prod_month_note'>a month & 9.9%APR </span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div className='prod_submit'>
-                                        <button type='button' onClick={handleShow}>Request callback</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+            ))}
 
             <div className='answer_section'>
                 <Container>
