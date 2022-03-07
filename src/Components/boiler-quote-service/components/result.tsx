@@ -12,17 +12,25 @@ import LongLifeImg from '../assets/long-life.png';
 import UltraEffiecientImg from '../assets/ultra-efficient.png';
 import EnergySaverImg from '../assets/energy-saver.png';
 import GermanEfficientImg from '../assets/german-efficient.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Formik } from 'formik';
-import emailjs from 'emailjs-com';
+import axios from 'axios';
 
 export default function QuoteResult(props: any) {
 
     const [show, setShow] = useState(false);
 
+    useEffect(() => {
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
+            .then(res => {
+                const response = res.data;
+                console.log("response data", response);
+            })
+    }, [])
+
     const handleClose = () => setShow(false);
     const handleShow = (data: any) => {
-        console.log("selected product", data)
+        console.log("selected product", data, props.data)
         setShow(true);
     }
 
@@ -323,12 +331,7 @@ export default function QuoteResult(props: any) {
                             return errors;
                         }}
                         onSubmit={(values, { setSubmitting }) => {
-                            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', "sunil hiiii", 'YOUR_USER_ID')
-                                .then((result) => {
-                                    window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-                                }, (error) => {
-                                    console.log(error.text);
-                                });
+
                         }}
                     >
                         {({

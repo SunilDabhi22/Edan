@@ -8,6 +8,7 @@ import PhoneIcon from '../../../Assets/phone.png';
 import ChatSupportIcon from '../../../Assets/chat-support.png';
 
 export default function ContactInfo(props: any) {
+
     return (
         <>
             <h3>Time to talk?</h3>
@@ -24,7 +25,7 @@ export default function ContactInfo(props: any) {
                     <img src={ChatSupportIcon} />
                     <div>
                         <span>Live Chat</span>
-                        <span><a href='#!'>Start Chat</a></span>
+                        <span><a href='#hs-chat-open'>Start Chat</a></span>
                     </div>
                 </div>
             </div>
