@@ -17,7 +17,7 @@ app.use((req,res,next)=>{
 app.post('/send',async(req,res)=>{
     try {
         
-    console.log(req.body);
+    // console.log(req.body);
     //   let transporter=  mailer.createTransport({
     //         service:'gmail',
     //         auth:{
@@ -26,29 +26,27 @@ app.post('/send',async(req,res)=>{
     //         }
     //     });
 
-    let testAccount = await nodemailer.createTestAccount();
-    console.log(testAccount)
+    // let testAccount = await nodemailer.createTestAccount();
+    // console.log(testAccount)
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false, // true for 465, false for other ports
+            service:'gmail', // true for 465, false for other ports
       auth: {
-        user: testAccount.user, // generated ethereal user
-        pass: testAccount.pass, // generated ethereal password
+        user: "leads.edanheating@gmail.com"        , // generated ethereal user
+        pass: "Success@2020", // generated ethereal password
       },
     });
 
        let ingo = await  transporter.sendMail({
             // to:"leads@edanpower.co.uk",
-            from:'user@gmail.com',
-            to:'meetrathi43@gmail.com',
-            subject:'Edan Heating New Lead',
+            from:'leads.edanheating@gmail.com',
+            to:['leads@edanpower.co.uk','meetrathi43@gmail.com'],
+            subject:`Edan Heating New Lead (${req.body?.values?.fullName} )`,
             html :getTemplate(req.body)
         });
         console.log(ingo);
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(ingo));
+        // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(ingo));
         return res.send({success:true})
 
     } catch (error) {
@@ -88,6 +86,7 @@ body {
 div[style*="margin: 16px 0"] {
     margin: 0 !important;
 }
+
 
 /* What it does: Stops Outlook from adding extra spacing to tables. */
 table,
@@ -257,10 +256,10 @@ table{
 	bottom: 0;
 	content: '';
 	width: 100%;
-	background: #000000;
+	background: #000000 !important;
     color: #ffffff;
 	z-index: -1;
-	opacity: .7;
+	opacity: .7 !important;
 }
 .hero h5{
     color: #ffffff;
@@ -280,6 +279,9 @@ table{
 	font-size: 20px;
 	margin-bottom: 10px;
     margin-top: 0;
+}
+.hero .text h2 a{
+    color: #ffffff !important;
 }
 /*FOOTER*/
 
@@ -359,12 +361,12 @@ table{
     	<!-- BEGIN BODY -->
       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
       	<tr>
-          <td valign="top" class="bg_white" style="padding: 1em 2.5em;">
+          <td valign="top" class="bg_white" style="padding: 1em 2.5em; background:#363636">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td width="100%" class="logo" style="text-align: center;">
 			            <a href="#">
-                            <img src="https://edanhomes.co.uk/wp-content/themes/yootheme/cache/edan-homes-logo-0277f54a.png" alt="Edan" width="100px" style="filter: contrast(0.5);"/>
+                            <img src="https://edanhomes.co.uk/wp-content/themes/yootheme/cache/edan-homes-logo-0277f54a.png" alt="Edan" width="100px" style="filter: contrast(0.5) !important;"/>
                         </a>
 			          </td>
           		</tr>
@@ -372,7 +374,7 @@ table{
           </td>
 	      </tr><!-- end tr -->
 				<tr>
-          <td valign="middle" class="hero bg_white" style="background-image: url(https://picsum.photos/500/700); background-size: cover; height: 250px;">
+          <td valign="middle" class="hero bg_white" style="background:#009640; background-size: cover; height: 250px;">
           	<div class="overlay"></div>
             <table>
             	<tr>
@@ -387,7 +389,7 @@ table{
             			</div>
                         <div class="text" style="padding: 0 3em; text-align: center;">
             				<h5>Email address</h5>            				
-                            <h2>${data?.values?.email}</h2>
+                            <h2 style="color:#ffffff !important;">${data?.values?.email}</h2>
             			</div>
             		</td>
             	</tr>

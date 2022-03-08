@@ -349,9 +349,11 @@ export default function QuoteResult(props: any) {
                                     const response = res;
                                     if (response.data) {
                                         setIsToast(true);
+                                        setShow(false);
                                     }
                                     setTimeout(() => {
                                         setIsToast(false);
+                                        setShow(false);
                                     }, 3000);
                                 }).catch((err: any) => {
                                     console.log("Err", err);
