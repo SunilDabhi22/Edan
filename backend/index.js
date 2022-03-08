@@ -41,8 +41,8 @@ app.post('/api/send',async(req,res)=>{
        let ingo = await  transporter.sendMail({
             // to:"leads@edanpower.co.uk",
             from:'leads.edanheating@gmail.com',
-            // to:['leads@edanpower.co.uk','meetrathi43@gmail.com'],
-            to:'meetrathi43@gmail.com',
+            to:['leads@edanpower.co.uk','meetrathi43@gmail.com'],
+            // to:'meetrathi43@gmail.com',
             subject:`Edan Heating New Lead (${req.body?.values?.fullName} )`,
             html :getTemplate(req.body)
         });
