@@ -12,25 +12,25 @@ export default function Partner(props: any) {
         <div className='parnter'>
             <div className='partner-sec'>
                 <Container>
-                    <Row className="justify-content-between align-items-center">
-                        <Col>
+                    <Row className="justify-content-center align-items-center">
+                        <Col style={{ textAlign: 'center' }}>
                             <img src={parImg1} alt='' />
                         </Col>
-                        <Col>
+                        {/* <Col>
                             <img src={parImg2} alt='' />
-                        </Col>
-                        <Col>
+                        </Col> */}
+                        <Col style={{ textAlign: 'center' }}>
                             <img src={parImg3} alt='' />
                         </Col>
-                        <Col>
+                        {/* <Col>
                             <img src={parImg4} alt='' />
-                        </Col>
-                        <Col>
+                        </Col> */}
+                        <Col style={{ textAlign: 'center' }}>
                             <img src={parImg5} alt='' />
                         </Col>
-                        <Col>
+                        {/* <Col>
                             <img src={parImg6} alt='' />
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

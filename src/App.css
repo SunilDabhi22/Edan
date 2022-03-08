@@ -26,3 +26,10 @@ body {
   font-weight: 600;
   color: #4e4545;
 }
+
+
+.toast_message{
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+}

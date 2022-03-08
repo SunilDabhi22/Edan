@@ -1,6 +1,6 @@
 import '../index.css';
 import ProductImage1 from '../../../Assets/product/ETEC_S_FRONT_RET-3_20n-053 E-Tec on trans bg.png';
-import { Button, Col, Container, Modal, Row } from 'react-bootstrap';
+import { Button, Col, Container, Modal, Row, Toast } from 'react-bootstrap';
 import { ShieldIcon, RefreshIcon } from '../../../SharedComponents/sharedIcons';
 import HybridImg from '../assets/hybrid.png';
 import RangeTopperImg from '../assets/range_topper.png';
@@ -19,19 +19,28 @@ import axios from 'axios';
 export default function QuoteResult(props: any) {
 
     const [show, setShow] = useState(false);
+    const [data, setData] = useState(null);
+    const [isToast, setIsToast] = useState(false);
 
-    useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
-            .then(res => {
-                const response = res.data;
-                console.log("response data", response);
-            })
-    }, [])
+    // useEffect(() => {
+    //     const data: any = [];
+    //     axios.post(`http://localhost:3000/send`, data)
+    //         .then((res: any) => {
+    //             const response = res;
+    //             console.log("response data", response);
+    //         }).catch((err: any) => {
+    //             console.log("Err", err);
+    //         })
+    // }, [])
 
     const handleClose = () => setShow(false);
     const handleShow = (data: any) => {
-        console.log("selected product", data, props.data)
+        const obj: any = {
+            data: data,
+            answer: props.data
+        }
         setShow(true);
+        setData(obj);
     }
 
     const boilerItems = [
@@ -331,7 +340,22 @@ export default function QuoteResult(props: any) {
                             return errors;
                         }}
                         onSubmit={(values, { setSubmitting }) => {
-
+                            const newObj = {
+                                values: values,
+                                data: data,
+                            }
+                            axios.post(`http://localhost:3000/send`, newObj)
+                                .then((res: any) => {
+                                    const response = res;
+                                    if (response.data) {
+                                        setIsToast(true);
+                                    }
+                                    setTimeout(() => {
+                                        setIsToast(false);
+                                    }, 3000);
+                                }).catch((err: any) => {
+                                    console.log("Err", err);
+                                })
                         }}
                     >
                         {({
@@ -368,7 +392,7 @@ export default function QuoteResult(props: any) {
                                                 <label>Contact number</label>
                                                 <input
                                                     type="text"
-                                                    name="contactNumber"
+                                                    name="contactNo"
                                                     placeholder='e.g. 0123 123 1234'
                                                     onChange={handleChange}
                                                     value={values.contactNo}
@@ -427,6 +451,17 @@ export default function QuoteResult(props: any) {
                     </Formik>
                 </Modal.Body>
             </Modal>
+
+            {isToast &&
+                <Container>
+                    <Row>
+                        <Toast className='toast_message'>
+                            <Toast.Body>Thank you for contacting us. We will be in touch with ASAP.</Toast.Body>
+                            <Button variant="link" onClick={() => setIsToast(false)}>Close</Button>
+                        </Toast>
+                    </Row>
+                </Container>
+            }
         </div>
     );
 } 

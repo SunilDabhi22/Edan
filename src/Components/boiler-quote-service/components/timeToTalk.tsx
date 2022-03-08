@@ -18,7 +18,7 @@ export default function ContactInfo(props: any) {
                     <img src={PhoneIcon} />
                     <div>
                         <span>Phone us</span>
-                        <span><a href='tel:1231231231'>1234 123 1234</a></span>
+                        <span><a href='tel:01213891647'>0121 389 1647</a></span>
                     </div>
                 </div>
                 <div className='chat-support'>

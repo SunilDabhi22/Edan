@@ -1,10 +1,15 @@
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Toast, Button } from 'react-bootstrap'
 import './index.css'
 import { MailIcon, Facebook, Instagram, YouTube, Twitter } from '../../SharedComponents/sharedIcons'
 import { Formik } from 'formik';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useState } from 'react';
 
 export default function ContactSection(props: any) {
+
+    const [isToast, setIsToast] = useState(false);
+
     return (
 
         <div className='contact_main'>
@@ -29,7 +34,7 @@ export default function ContactSection(props: any) {
                                         <span>8am - 4pm</span>
                                     </p>
                                 </div>
-                                <h5 className='office_number'>0330 113 1333</h5>
+                                <h5 className='office_number'>0121 389 1647</h5>
                                 <span className='mail-box'><MailIcon /> Email Sales</span>
                             </div>
                         </Col>
@@ -47,7 +52,7 @@ export default function ContactSection(props: any) {
                                         <span>8am - 4pm</span>
                                     </p>
                                 </div>
-                                <h5 className='office_number'>0123 123 1234</h5>
+                                <h5 className='office_number'>0121 389 1647</h5>
                                 <span className='mail-box'><MailIcon /> Email Aftercare</span>
                             </div>
                         </Col>
@@ -61,7 +66,7 @@ export default function ContactSection(props: any) {
                                         <span>8am - 7pm</span>
                                     </p>
                                 </div>
-                                <h5 className='office_number'>0123 123 1234</h5>
+                                <h5 className='office_number'>0121 389 1647</h5>
                             </div>
                         </Col>
                     </Row>
@@ -98,10 +103,23 @@ export default function ContactSection(props: any) {
                                     return errors;
                                 }}
                                 onSubmit={(values, { setSubmitting }) => {
-                                    setTimeout(() => {
+                                    const newObj = {
+                                        values: values,
+                                        isFrom: 'contactPage',
+                                    }
+                                    axios.post(`http://localhost:3000/send`, newObj)
+                                        .then((res: any) => {
+                                            const response = res;
+                                            if (response.data) {
+                                                setIsToast(true);
+                                            }
+                                            setTimeout(() => {
+                                                setIsToast(false);
+                                            }, 3000);
 
-                                        setSubmitting(false);
-                                    }, 400);
+                                        }).catch((err: any) => {
+                                            console.log("Err", err);
+                                        })
                                 }}
                             >
                                 {({
@@ -138,7 +156,7 @@ export default function ContactSection(props: any) {
                                                         <label>Contact number</label>
                                                         <input
                                                             type="text"
-                                                            name="contactNumber"
+                                                            name="contactNo"
                                                             placeholder='e.g. 0123 123 1234'
                                                             onChange={handleChange}
                                                             value={values.contactNo}
@@ -210,6 +228,17 @@ export default function ContactSection(props: any) {
                     </Row>
                 </Container>
             </div>
+            {isToast &&
+                <Container>
+                    <Row>
+                        <Toast className='toast_message'>
+                            <Toast.Body>Thank you for contacting us. We will be in touch with ASAP.</Toast.Body>
+                            <Button variant="link" onClick={() => setIsToast(false)}>Close</Button>
+                        </Toast>
+                    </Row>
+                </Container>
+            }
         </div>
+
     )
 }
