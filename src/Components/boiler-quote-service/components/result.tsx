@@ -344,7 +344,7 @@ export default function QuoteResult(props: any) {
                                 values: values,
                                 data: data,
                             }
-                            axios.post(`/send`, newObj)
+                            axios.post(`/api/send`, newObj)
                                 .then((res: any) => {
                                     const response = res;
                                     if (response.data) {

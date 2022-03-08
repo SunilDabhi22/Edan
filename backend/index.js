@@ -14,7 +14,7 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.post('/send',async(req,res)=>{
+app.post('/api/send',async(req,res)=>{
     try {
         
     // console.log(req.body);
