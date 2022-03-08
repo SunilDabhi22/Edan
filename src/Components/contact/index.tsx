@@ -107,7 +107,7 @@ export default function ContactSection(props: any) {
                                         values: values,
                                         isFrom: 'contactPage',
                                     }
-                                    axios.post(`http://localhost:3000/send`, newObj)
+                                    axios.post(`/send`, newObj)
                                         .then((res: any) => {
                                             const response = res;
                                             if (response.data) {
