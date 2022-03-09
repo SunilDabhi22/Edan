@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.77b671b1.css",
-    "main.js": "/static/js/main.a057ca0d.js",
+    "main.css": "/static/css/main.4293707e.css",
+    "main.js": "/static/js/main.282cb710.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.94931b328d6ea91f088b7f3c3f3c89b1.svg",
     "static/media/banner.jpg": "/static/media/banner.6721763e3bf7ab77a44c.jpg",
     "static/media/range_topper.png": "/static/media/range_topper.6cf6e99d777b4a279f45.png",
     "static/media/marketing-image.jpg": "/static/media/marketing-image.cc0c5cb97ee33c57ee7c.jpg",
@@ -18,7 +19,6 @@
     "static/media/low-cost.png": "/static/media/low-cost.da1e91baaed28effea6c.png",
     "static/media/worcester-bosch-boilers-logo.png": "/static/media/worcester-bosch-boilers-logo.c14185a2028a47a6f19d.png",
     "static/media/fit.svg": "/static/media/fit.b6066b5e781771dbca035ca2c2988f1d.svg",
-    "static/media/logo.png": "/static/media/logo.e35a8167b8c7c5bd1ef5.png",
     "static/media/pick.svg": "/static/media/pick.5a771035fd2562dabdaad95205033139.svg",
     "static/media/alpha-boilers-logo.png": "/static/media/alpha-boilers-logo.0da3d5b8fe82b458d6bb.png",
     "static/media/answer.svg": "/static/media/answer.a9f7b583210e85f2649df2331ff36f2c.svg",
@@ -64,12 +64,12 @@
     "static/media/cross.svg": "/static/media/cross.83d7b06b25f220c999e9a454a915ad92.svg",
     "static/media/tick.svg": "/static/media/tick.30ccc1bd752a40bddc549d3c05c21527.svg",
     "static/media/step-1.svg": "/static/media/step-1.7b64e1891a236d9decb7fdbcf755e1f4.svg",
-    "main.77b671b1.css.map": "/static/css/main.77b671b1.css.map",
-    "main.a057ca0d.js.map": "/static/js/main.a057ca0d.js.map",
+    "main.4293707e.css.map": "/static/css/main.4293707e.css.map",
+    "main.282cb710.js.map": "/static/js/main.282cb710.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77b671b1.css",
-    "static/js/main.a057ca0d.js"
+    "static/css/main.4293707e.css",
+    "static/js/main.282cb710.js"
   ]
 }

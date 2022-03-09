@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './index.css'
-import Logo from '../../Assets/logo.png'
+import Logo from '../../Assets/logo.svg'
 
 export default function Header(props: any) {
     return (

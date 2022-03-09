@@ -367,7 +367,7 @@ table{
           		<tr>
           			<td width="100%" class="logo" style="text-align: center;">
 			            <a href="#">
-                            <img src="https://edanhomes.co.uk/wp-content/themes/yootheme/cache/edan-homes-logo-0277f54a.png" alt="Edan" width="100px" style="filter: contrast(0.5) !important;"/>
+                            <img src="https://edanheating.s3.eu-west-2.amazonaws.com/logo.png" alt="Edan" width="100px" />
                         </a>
 			          </td>
           		</tr>
