@@ -18,7 +18,7 @@ export default function Header(props: any) {
                 <Navbar collapseOnSelect expand="lg">
                     <Container>
                         <Navbar.Brand href="/">
-                            <img src={Logo} alt="" className='logo-sec' />
+                            <img src='https://edanheating.s3.eu-west-2.amazonaws.com/logo.png' alt="" className='logo-sec' />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
