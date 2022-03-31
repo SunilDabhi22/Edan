@@ -42,9 +42,9 @@ export default function Footer(props: any) {
                     <div className='footer-second-sec'>
                         <Col sm={4} xs={12}>
                             <ul className='footer-links'>
-                                {/* <li>
-                                    <Link to='/'>Blog</Link>
-                                </li> */}
+                                <li>
+                                    <Link to='/blog'>Blog</Link>
+                                </li>
                                 {/* <li>
                                     <Link to='/'>Installer Signup</Link>
                                 </li> */}

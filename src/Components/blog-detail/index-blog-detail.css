@@ -1,0 +1,33 @@
+.blog-detail-boilerMain{
+  margin: 3rem 0;
+}
+.blog-detail-boilerMain .boiler-sec h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.blog-detail-boilerMain .boiler-sec .articles .articles-items img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.blog-detail-boilerMain .boiler-sec .articles .articles-items pre{
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.blog-detail-boilerMain .boiler-sec .articles .articles-items h1{
+  margin-bottom: 2rem;
+  color: #009640;
+}
+
+.blog-detail-boilerMain .boiler-sec .articles .articles-items p{
+  font-size: 1.2rem;
+}
+
+.blog-detail-boilerMain .boiler-sec .articles .articles-items h2{
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 30px;
+}

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import './index.css'
+import './index_article.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function BoilerSection(props: any) {
+export default function Articles(props: any) {
 
     const slider: any = React.useRef(null);
 
