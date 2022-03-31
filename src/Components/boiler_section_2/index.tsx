@@ -73,7 +73,7 @@ export default function BoilerSection(props: any) {
                 </div>
                 <div className='detail-col'>
                     <div className='right-img-sec'>
-                        <img src='https://picsum.photos/500/700' alt='' />
+                        <img src='https://picsum.photos/800/1000' alt='' />
                     </div>
                 </div>
             </div>
