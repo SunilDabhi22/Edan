@@ -15,7 +15,7 @@
   margin-bottom: 4rem;
 }
 
-.boilerMain .boiler-sec a {
+/* .boilerMain .boiler-sec a {
   background-color: #009640;
   padding: 1rem 2rem;
   color: #ffffff;
@@ -23,7 +23,7 @@
   text-decoration: none;
   border-radius: 50px;
   margin-top: 1rem;
-}
+} */
 
 .boilerMain .boiler-sec a:hover {
   background: #000000;

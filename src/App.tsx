@@ -10,7 +10,7 @@ import PrivacyPolicy from './Pages/privacy_policy';
 import BoilerQuote from './Pages/boiler-quote';
 import AboutUs from './Pages/about_us';
 import Blog from './Pages/blog';
-import BlogDetail_1 from './Components/blog-detail/electricity-prices-why-are-they-so-high'
+import BlogDetail from './Components/blog-detail'
 
 function App() {
 
@@ -27,7 +27,10 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path='/boiler-quote' element={<BoilerQuote />} />
           <Route path='/about-us' element={<AboutUs />} />
-          <Route path="/blog/electricity-prices-why-are-they-so-high" element={<BlogDetail_1 />} />
+          <Route
+            path="/blog/:slug"
+            element={<BlogDetail />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

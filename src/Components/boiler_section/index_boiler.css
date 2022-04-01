@@ -43,6 +43,10 @@
 }
 
 .boilerMain .boiler-sec a {
+  text-decoration: none;
+}
+
+.boilerMain .boiler-sec a.view_all_btn {
   background-color: #009640;
   padding: 1rem 2rem;
   color: #ffffff;
