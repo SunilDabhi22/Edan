@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './index.css'
 import { Link } from 'react-router-dom'
-import { Facebook, Instagram, YouTube, Twitter } from '../../SharedComponents/sharedIcons'
+import { Facebook, Instagram, LinkedInIcon, Twitter } from '../../SharedComponents/sharedIcons'
 
 export default function Footer(props: any) {
     React.useEffect(() => {
@@ -48,12 +48,12 @@ export default function Footer(props: any) {
                                 {/* <li>
                                     <Link to='/'>Installer Signup</Link>
                                 </li> */}
-                                <li>
+                                {/* <li>
                                     <Link to='/terms'>T&C's</Link>
                                 </li>
                                 <li>
                                     <Link to='/privacy'>Privacy Policy</Link>
-                                </li>
+                                </li> */}
                                 {/* <li>
                                     <Link to='/'>Sitemap</Link>
                                 </li> */}
@@ -69,16 +69,16 @@ export default function Footer(props: any) {
                         <Col sm={4} xs={12}>
                             <ul className='footer-social-links'>
                                 <li>
-                                    <Link to='/' title='Facebook'><Facebook /></Link>
+                                    <Link to='//www.facebook.com/edanheating/' target={'_blank'} title='Facebook'><Facebook /></Link>
                                 </li>
                                 <li>
-                                    <Link to='/' title='Instagram'><Instagram /></Link>
+                                    <Link to='//instagram.com/edanhomes?utm_medium=copy_link' target={'_blank'} title='Instagram'><Instagram /></Link>
                                 </li>
                                 <li>
-                                    <Link to='/' title='Twitter'><Twitter /></Link>
+                                    <Link to='//twitter.com/edanpower' target={'_blank'} title='Twitter'><Twitter /></Link>
                                 </li>
                                 <li>
-                                    <Link to='/' title='YouTube'><YouTube /></Link>
+                                    <Link to='//www.linkedin.com/in/edan-power-06323148/' target={'_blank'} title='Linked In'><LinkedInIcon /></Link>
                                 </li>
                             </ul>
                         </Col>

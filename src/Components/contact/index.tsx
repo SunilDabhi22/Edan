@@ -1,6 +1,6 @@
 import { Container, Row, Col, Toast, Button } from 'react-bootstrap'
 import './index.css'
-import { MailIcon, Facebook, Instagram, YouTube, Twitter } from '../../SharedComponents/sharedIcons'
+import { MailIcon, Facebook, Instagram, LinkedInIcon, Twitter } from '../../SharedComponents/sharedIcons'
 import { Formik } from 'formik';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -218,10 +218,10 @@ export default function ContactSection(props: any) {
                                 <h4 className='social_title'>Social</h4>
                                 <span>Be our friend, follow us.</span>
                                 <div className='contact_social_media'>
-                                    <li><Link to='/' title='Facebook'><Facebook /></Link></li>
-                                    <li><Link to='/' title='Instagram'><Instagram /></Link></li>
-                                    <li><Link to='/' title='YouTube'><YouTube /></Link></li>
-                                    <li><Link to='/' title='Twitter'><Twitter /></Link></li>
+                                    <li><Link to='//www.facebook.com/edanheating/' title='Facebook'><Facebook /></Link></li>
+                                    <li><Link to='//instagram.com/edanhomes?utm_medium=copy_link' title='Instagram'><Instagram /></Link></li>
+                                    <li><Link to='//www.linkedin.com/in/edan-power-06323148/' title='LinkedIn'><LinkedInIcon /></Link></li>
+                                    <li><Link to='//twitter.com/edanpower' title='Twitter'><Twitter /></Link></li>
                                 </div>
                             </div>
                         </Col>
