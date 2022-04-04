@@ -90,7 +90,7 @@ export default function BoilerSection(props: any) {
                             <h3>Every boiler, for every price.</h3>
                             <p>Find a boiler that's the right fit for your home, at a price that's right for your needs.</p>
 
-                            <a href='/boiler-quote'>Get your new boiler</a>
+                            <a href='/boiler-quote' className='new_boiler_action'>Get your new boiler</a>
 
                             <button className='slider-prev-btn' onClick={() => slider?.current?.slickPrev()}>
                                 <PrevArrowIcon />

@@ -39,7 +39,6 @@ export default function Blog(props: any) {
                                                 to={{
                                                     pathname: `/blog/${post?.slug}`
                                                 }}
-                                                state={{ ...post }}
                                             >
                                                 <div className='articles-items'>
                                                     <img src={post.yoast_head_json?.og_image.map((e: any) => e.url)} alt='' />

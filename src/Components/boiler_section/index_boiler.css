@@ -57,6 +57,17 @@
   font-weight: 600;
 }
 
+.boilerMain .boiler-sec a.new_boiler_action{
+  background-color: #009640;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  font-size: 1.3vw;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
 .boilerMain .boiler-sec a:hover {
   background: #000000;
 }
