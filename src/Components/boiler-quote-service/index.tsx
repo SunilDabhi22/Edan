@@ -46,9 +46,10 @@ export default function BoilerQuoteService(props: any) {
         setIsStart('start');
     }
 
-    const handleRestart = () => {
+    const handleRestart = (resetForm: any) => {
         setRadioVal('');
         setIsStart('start');
+        resetForm();
     }
 
     return (
@@ -61,7 +62,7 @@ export default function BoilerQuoteService(props: any) {
                     props.handleQuote(values, true);
                 }}
             >
-                {({ values, setFieldValue }) => (
+                {({ values, setFieldValue, resetForm }) => (
                     <Form autoComplete='off'>
                         {isStart === 'start' ? null :
                             <GetStarted handleStart={handleStart} />
@@ -73,11 +74,11 @@ export default function BoilerQuoteService(props: any) {
                         }
 
                         {['other_place', 'lpg'].includes(isRadioVal) &&
-                            <BoilerSection2 setFieldValue={setFieldValue} {...props} handleRestart={handleRestart} />
+                            <BoilerSection2 setFieldValue={setFieldValue} {...props} handleRestart={handleRestart.bind(null, resetForm)} />
                         }
 
                         {['other_boiler', 'regular_boiler_r', 'system_boiler_r'].includes(isRadioVal) &&
-                            <RestartSection setFieldValue={setFieldValue} {...props} handleRestart={handleRestart} />
+                            <RestartSection setFieldValue={setFieldValue} {...props} handleRestart={handleRestart.bind(null, resetForm)} />
                         }
 
                         {isRadioVal === 'gas' &&
