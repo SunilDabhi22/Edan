@@ -142,7 +142,6 @@ export default function QuoteResult(props: any) {
         }
     ]
 
-
     return (
         <div className='boiler_quote_prod'>
             <Container>
@@ -223,6 +222,17 @@ export default function QuoteResult(props: any) {
                                                     props?.data?.current_boiler === 'system_boiler' ? "System Boiler" :
                                                         props?.data?.current_boiler === 'back_boiler' ? "Back Boiler" :
                                                             "-"
+                                        }
+                                    </span></li>
+                                <li>Regular Boiler
+                                    <span>
+                                        {
+                                            props?.data?.how_old_boiler === 'twenty_five_plus' ? "25+ years" :
+                                                props?.data?.how_old_boiler === 'twenty_to_twenty_five_plus' ? "20-25 years" :
+                                                    props?.data?.how_old_boiler === 'ten_to_twenty_plus' ? "10-20 years" :
+                                                        props?.data?.how_old_boiler === 'zero_to_ten_plus' ? "0-10 years" :
+                                                            props?.data?.how_old_boiler === 'unsure_years' ? "Unsure" :
+                                                                "-"
                                         }
                                     </span></li>
                                 <li>Replacement
