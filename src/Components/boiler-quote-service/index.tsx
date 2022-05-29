@@ -21,6 +21,7 @@ import RoofType from './components/roof_type';
 import PostCodeScr from './components/postcodeScreen';
 import NewBoilerPlace from './components/new_boiler_place';
 import HowOldBoiler from './components/how_old_boiler';
+import ReplaceBoilerForCombi from './components/replace_boiler_for_combi'
 
 export default function BoilerQuoteService(props: any) {
 
@@ -33,7 +34,7 @@ export default function BoilerQuoteService(props: any) {
         'two_bathtubs', 'three_plus_bathtubs', 'one_bathtubs', 'no_bathtubs', 'rad_0_5', 'rad_6_9', 'rad_10_13', 'red_14_16',
         'rad_17_plus', 'no_shower_cubicles', 'one_shower_cubicle', 'two_plus_shower_cubicles', 'external_wall', 'roof',
         'pitched', 'flat', 'same_room', 'same_floor', 'another_floor', 'other_place', 'twenty_five_plus', 'twenty_to_twenty_five_plus',
-        'ten_to_twenty_plus', 'zero_to_ten_plus', 'unsure_years'
+        'ten_to_twenty_plus', 'zero_to_ten_plus', 'unsure_years', 'combi_boiler_r_new', 'regular_boiler_r_new', 'system_boiler_r_new'
     ];
 
     const [isRadioVal, setRadioVal] = useState('');
@@ -75,27 +76,35 @@ export default function BoilerQuoteService(props: any) {
                             <BoilerSection1 setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['other_place', 'lpg'].includes(isRadioVal) &&
+                        {['other_place'].includes(isRadioVal) &&
                             <BoilerSection2 setFieldValue={setFieldValue} {...props} handleRestart={handleRestart.bind(null, resetForm)} />
                         }
 
-                        {['other_boiler', 'system_boiler_r'].includes(isRadioVal) &&
+                        {['other_boiler', 'system_boiler_r', 'regular_boiler_r_new'].includes(isRadioVal) &&
                             <RestartSection setFieldValue={setFieldValue} {...props} handleRestart={handleRestart.bind(null, resetForm)} />
                         }
 
-                        {isRadioVal === 'gas' &&
+                        {['gas', 'lpg'].includes(isRadioVal) &&
                             <BoilerType setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['combi_boiler', 'regular_boiler', 'system_boiler', 'back_boiler'].includes(isRadioVal) &&
+                        {['regular_boiler', 'system_boiler', 'back_boiler'].includes(isRadioVal) &&
                             <ReplaceBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['regular_boiler_r'].includes(isRadioVal) &&
+                        {['combi_boiler'].includes(isRadioVal) &&
+                            <ReplaceBoilerForCombi setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['combi_boiler_r_new', 'system_boiler_r_new'].includes(isRadioVal) &&
                             <HowOldBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['combi_boiler_r', 'twenty_five_plus', 'twenty_to_twenty_five_plus',
+                        {['combi_boiler_r', 'regular_boiler_r'].includes(isRadioVal) &&
+                            <HowOldBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {['twenty_five_plus', 'twenty_to_twenty_five_plus',
                             'ten_to_twenty_plus', 'zero_to_ten_plus', 'unsure_years'].includes(isRadioVal) &&
                             <NewLocationBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }

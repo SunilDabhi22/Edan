@@ -238,9 +238,9 @@ export default function QuoteResult(props: any) {
                                 <li>Replacement
                                     <span>
                                         {
-                                            props?.data?.replace_boiler === 'combi_boiler_r' ? "Combi Boiler" :
-                                                props?.data?.replace_boiler === 'regular_boiler_r' ? "Regular Boiler" :
-                                                    props?.data?.replace_boiler === 'system_boiler_r' ? "System Boiler" :
+                                            props?.data?.replace_boiler === 'combi_boiler_r' || 'combi_boiler_r_new' ? "Combi Boiler" :
+                                                props?.data?.replace_boiler === 'regular_boiler_r' || 'regular_boiler_r_new' ? "Regular Boiler" :
+                                                    props?.data?.replace_boiler === 'system_boiler_r' || 'system_boiler_r_new' ? "System Boiler" :
                                                         "-"
                                         }
                                     </span>
