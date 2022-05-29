@@ -5,7 +5,7 @@ import RegularBoiler from '../assets/regular-boiler.svg';
 import SystemBoiler from '../assets/system-boiler.svg';
 import BackBoiler from '../assets/back-boiler.svg';
 
-export default function BoilerFirstForCombi(props: any) {
+export default function BoilerFirstForSystem(props: any) {
     return (
         <>
             <h3>What type of boiler do you want to replace it with?</h3>
@@ -17,9 +17,9 @@ export default function BoilerFirstForCombi(props: any) {
                             <div className="radio-item">
                                 <input
                                     {...field}
-                                    id="combi_boiler_r_new"
-                                    value="combi_boiler_r_new"
-                                    checked={field.value === 'combi_boiler_r_new'}
+                                    id="combi_boiler_r_sys"
+                                    value="combi_boiler_r_sys"
+                                    checked={field.value === 'combi_boiler_r_sys'}
                                     name="replace_boiler"
                                     type="radio"
                                     onChange={(e) => {
@@ -27,7 +27,7 @@ export default function BoilerFirstForCombi(props: any) {
                                         props.setFieldValue('replace_boiler', e.target.value)
                                     }}
                                 />
-                                <label htmlFor="combi_boiler_r_new" className='quote-options-label quote-cc'>
+                                <label htmlFor="combi_boiler_r_sys" className='quote-options-label quote-cc'>
                                     <img src={CombiBoiler} alt='Combi Boiler' />
                                     <span>Combi Boiler</span>
                                 </label>
@@ -36,9 +36,9 @@ export default function BoilerFirstForCombi(props: any) {
                             <div className="radio-item">
                                 <input
                                     {...field}
-                                    id="regular_boiler_r_new"
-                                    value="regular_boiler_r_new"
-                                    checked={field.value === 'regular_boiler_r_new'}
+                                    id="regular_boiler_r_sys"
+                                    value="regular_boiler_r_sys"
+                                    checked={field.value === 'regular_boiler_r_sys'}
                                     name="replace_boiler"
                                     type="radio"
                                     onChange={(e) => {
@@ -46,7 +46,7 @@ export default function BoilerFirstForCombi(props: any) {
                                         props.setFieldValue('replace_boiler', e.target.value)
                                     }}
                                 />
-                                <label htmlFor="regular_boiler_r_new" className='quote-options-label quote-cc'>
+                                <label htmlFor="regular_boiler_r_sys" className='quote-options-label quote-cc'>
                                     <img src={RegularBoiler} alt='Regular Boiler' />
                                     <span>Regular Boiler</span>
                                 </label>
@@ -55,9 +55,9 @@ export default function BoilerFirstForCombi(props: any) {
                             <div className="radio-item">
                                 <input
                                     {...field}
-                                    id="system_boiler_r_new"
-                                    value="system_boiler_r_new"
-                                    checked={field.value === 'system_boiler_r_new'}
+                                    id="system_boiler_r_sys"
+                                    value="system_boiler_r_sys"
+                                    checked={field.value === 'system_boiler_r_sys'}
                                     name="replace_boiler"
                                     type="radio"
                                     onChange={(e) => {
@@ -65,7 +65,7 @@ export default function BoilerFirstForCombi(props: any) {
                                         props.setFieldValue('replace_boiler', e.target.value)
                                     }}
                                 />
-                                <label htmlFor="system_boiler_r_new" className='quote-options-label quote-cc'>
+                                <label htmlFor="system_boiler_r_sys" className='quote-options-label quote-cc'>
                                     <img src={SystemBoiler} alt='system boiler' />
                                     <span>System Boiler</span>
                                 </label>
