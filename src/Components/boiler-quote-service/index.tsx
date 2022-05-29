@@ -80,7 +80,7 @@ export default function BoilerQuoteService(props: any) {
                             <BoilerSection2 setFieldValue={setFieldValue} {...props} handleRestart={handleRestart.bind(null, resetForm)} />
                         }
 
-                        {['other_boiler', 'system_boiler_r', 'regular_boiler_r_new'].includes(isRadioVal) &&
+                        {['other_boiler', 'system_boiler_r', 'regular_boiler_r_new', 'system_boiler_r_new'].includes(isRadioVal) &&
                             <RestartSection setFieldValue={setFieldValue} {...props} handleRestart={handleRestart.bind(null, resetForm)} />
                         }
 
@@ -96,7 +96,7 @@ export default function BoilerQuoteService(props: any) {
                             <ReplaceBoilerForCombi setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
-                        {['combi_boiler_r_new', 'system_boiler_r_new'].includes(isRadioVal) &&
+                        {['combi_boiler_r_new'].includes(isRadioVal) &&
                             <HowOldBoiler setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
                         }
 
