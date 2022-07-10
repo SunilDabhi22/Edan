@@ -23,7 +23,8 @@ import NewBoilerPlace from './components/new_boiler_place';
 import HowOldBoiler from './components/how_old_boiler';
 import ReplaceBoilerForCombi from './components/replace_boiler_for_combi'
 import ReplaceBoilerForSystem from './components/replace_boiler_for_sys'
-import ReplaceBoilerForBackBoiler from './components/replace_boiler_for_back'
+import ReplaceBoilerForBackBoiler from './components/replace_boiler_for_back';
+import ExpertQuoteForm from './components/getExpertQuote';
 
 export default function BoilerQuoteService(props: any) {
 
@@ -43,6 +44,7 @@ export default function BoilerQuoteService(props: any) {
     const [isRadioVal, setRadioVal] = useState('');
     const [isStart, setIsStart]: any = useState('');
     const [calQuote, setCalQuote]: any = useState(false);
+    const [quoteForm, setIsQuoteForm] = useState(false);
 
     const handleChangeRadio = (e: any) => {
         setRadioVal(e.target.value);
@@ -52,6 +54,10 @@ export default function BoilerQuoteService(props: any) {
         setIsStart('start');
     }
 
+    const handleQuoteForm = () => {
+        setIsQuoteForm(true);
+    }
+
     const handleRestart = (resetForm: any) => {
         setRadioVal('');
         setIsStart('start');
@@ -59,7 +65,7 @@ export default function BoilerQuoteService(props: any) {
     }
 
     return (
-        <div className='boiler-quote-main'>
+        <div className={quoteForm ? 'export-quote-main' : 'boiler-quote-main'}>
             <Formik
                 initialValues={{
 
@@ -70,13 +76,18 @@ export default function BoilerQuoteService(props: any) {
             >
                 {({ values, setFieldValue, resetForm }) => (
                     <Form autoComplete='off'>
-                        {isStart === 'start' ? null :
-                            <GetStarted handleStart={handleStart} />
+
+                        {quoteForm || isStart === 'start' ? null :
+                            <GetStarted handleStart={handleStart} handleQuoteForm={handleQuoteForm} />
                         }
 
-                        {isStart === 'start' &&
+                        {!quoteForm && isStart === 'start' &&
                             !allRadioValues.includes(isRadioVal) &&
                             <BoilerSection1 setFieldValue={setFieldValue} {...props} handleChangeRadio={handleChangeRadio} />
+                        }
+
+                        {quoteForm &&
+                            <ExpertQuoteForm {...props} handleQuoteForm={handleQuoteForm} />
                         }
 
                         {['other_place'].includes(isRadioVal) &&

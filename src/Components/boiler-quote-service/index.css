@@ -233,7 +233,6 @@
   font-weight: 500;
 }
 
-
 .boiler_quote_prod .boiler_prod_item {
   background: #009640;
   padding: 3rem;
@@ -529,13 +528,13 @@
   font-weight: 500;
 }
 
-.request-callback .form-input label{
+.request-callback .form-input label {
   display: block;
   font-size: 0.9rem;
   margin-top: 1rem;
 }
 
-.request-callback .form-input input{
+.request-callback .form-input input {
   /* margin-bottom: 1rem; */
   border: 0;
   background: #e4e4e4;
@@ -544,7 +543,7 @@
   border-radius: 5px;
 }
 
-.request-callback .form-input textarea{
+.request-callback .form-input textarea {
   border: 0;
   background: #e4e4e4;
   padding: 5px 10px;
@@ -552,18 +551,18 @@
   border-radius: 5px;
 }
 
-.request-callback .form-input span.form-error{
+.request-callback .form-input span.form-error {
   color: #bf2c25;
   font-size: 0.7rem;
 }
 
-.request-callback .form-note{
+.request-callback .form-note {
   font-size: 0.8rem;
   margin-bottom: 1rem;
   color: #949494;
 }
 
-.request-callback .form-btn button{
+.request-callback .form-btn button {
   background-color: #009640;
   color: #ffffff;
   border: 0;
@@ -573,7 +572,7 @@
   margin-bottom: 1rem;
 }
 
-.request-callback .form-btn button:hover{
+.request-callback .form-btn button:hover {
   background-color: #000000;
   color: #ffffff;
   border: 0;
@@ -581,4 +580,138 @@
   font-weight: 600;
   padding: 0.5rem 2.5rem;
   margin-bottom: 1rem;
+}
+
+.quote-start-step .left_section {
+  text-align: left;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(190, 190, 190);
+}
+
+.quote-start-step .right_section {
+  text-align: left;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(190, 190, 190);
+}
+
+.quote-start-step .left_section ul,
+.quote-start-step .right_section ul {
+  padding-left: 0;
+  list-style-type: none;
+  padding: 1rem 0;
+}
+
+.quote-start-step .left_section ul li,
+.quote-start-step .right_section ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0.4rem;
+}
+
+.quote-start-step .left_section ul li:before,
+.quote-start-step .right_section ul li:before {
+  content: url("./assets/checkmark-circle-outline.svg");
+  font-weight: 300;
+  margin-left: -10px;
+  margin-right: 10px;
+  color: #27754e;
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  width: 20px;
+}
+
+.quote-start-step .right_section .popular_text {
+  color: #e09339 !important;
+  font-weight: 500;
+}
+
+.quote-start-step .right_section .submit_btn {
+  background: #e09339;
+}
+
+.quote-start-step .right_section .submit_btn:hover {
+  background: #000000;
+}
+form.request-callback_another {
+  background: #ebebeb;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.request-callback_another .form-input {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.request-callback_another .form-input label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.request-callback_another .form-input .form-error {
+  display: block;
+  color: #e20000;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.request-callback_another .form-input input {
+  border: 0;
+  background: #ffffff;
+  padding: 6px 13px;
+  width: 100%;
+}
+
+.request-callback_another .form-input textarea {
+  border: 0;
+  background: #ffffff;
+  width: 100%;
+  padding: 6px 13px;
+}
+
+.request-callback_another .form-btn button {
+  background-color: #009640;
+  color: #ffffff;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 0.5rem 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.request-callback_another .form-btn button:hover {
+  background: #000000;
+  text-shadow: 0 0 10px #787878;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.boiler_quote_prod_another .form_head h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.boiler_quote_prod_another .form_head p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #7a7878;
+}
+
+.export-quote-main {
+  max-width: calc(100vh - 25vh);
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .export-quote-main {
+    padding: 20px;
+    max-width: 100% !important;
+  }  
 }
