@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.f8162195.css",
-    "main.js": "/static/js/main.84d6eaec.js",
+    "main.css": "/static/css/main.a88bc127.css",
+    "main.js": "/static/js/main.85881b29.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/banner.jpg": "/static/media/banner.6721763e3bf7ab77a44c.jpg",
     "static/media/range_topper.png": "/static/media/range_topper.6cf6e99d777b4a279f45.png",
+    "static/media/About-Page-Image1-a423ac1f.png": "/static/media/About-Page-Image1-a423ac1f.af5af6a249be685a92d1.png",
     "static/media/marketing-image.jpg": "/static/media/marketing-image.cc0c5cb97ee33c57ee7c.jpg",
     "static/media/latest-model.png": "/static/media/latest-model.de5d400094124cb3f69a.png",
+    "static/media/About-Page-Image2-8e9f1c97.png": "/static/media/About-Page-Image2-8e9f1c97.62aaae4fce0f6c5389d1.png",
     "static/media/energy-saver.png": "/static/media/energy-saver.76a8684bafc5eaad09c0.png",
     "static/media/hybrid.png": "/static/media/hybrid.9245293752d3d15deea2.png",
     "static/media/german-efficient.png": "/static/media/german-efficient.88d1441a60cc16e08926.png",
@@ -16,11 +18,11 @@
     "static/media/super-value.png": "/static/media/super-value.f18e9913e3ae9017dcc1.png",
     "static/media/compact-size.png": "/static/media/compact-size.d96c5cdb2dccea8ed85d.png",
     "static/media/low-cost.png": "/static/media/low-cost.da1e91baaed28effea6c.png",
+    "static/media/you-pick.jpg": "/static/media/you-pick.416ae99478a30e592e73.jpg",
+    "static/media/we-ask.webp": "/static/media/we-ask.1bb343f944dcab3607a1.webp",
+    "static/media/done.webp": "/static/media/done.49bb68cbbf2abfedfcaa.webp",
     "static/media/worcester-bosch-boilers-logo.png": "/static/media/worcester-bosch-boilers-logo.c14185a2028a47a6f19d.png",
-    "static/media/fit.svg": "/static/media/fit.b6066b5e781771dbca035ca2c2988f1d.svg",
-    "static/media/pick.svg": "/static/media/pick.5a771035fd2562dabdaad95205033139.svg",
     "static/media/alpha-boilers-logo.png": "/static/media/alpha-boilers-logo.0da3d5b8fe82b458d6bb.png",
-    "static/media/answer.svg": "/static/media/answer.a9f7b583210e85f2649df2331ff36f2c.svg",
     "static/media/radiator.svg": "/static/media/radiator.37fc175110965702bc19f10afc0fa73e.svg",
     "static/media/regular-boiler.svg": "/static/media/regular-boiler.61c98b86d7b27e25d513fedeef51cd19.svg",
     "static/media/shower-2.svg": "/static/media/shower-2.fd83e8ea52c803845965cbf0eb1af9eb.svg",
@@ -59,20 +61,21 @@
     "static/media/back-boiler.svg": "/static/media/back-boiler.587704a83794a11096baa620ada67b44.svg",
     "static/media/step-2.svg": "/static/media/step-2.d7b9de32a30b2ad5e9d8cf264af2525f.svg",
     "static/media/combi-boiler.svg": "/static/media/combi-boiler.09df6b7e4cf16b56777be5cce584e4cb.svg",
-    "static/media/step-3.svg": "/static/media/step-3.16bfd4e9565f16a3e895d253b15c4658.svg",
     "index.html": "/index.html",
+    "static/media/step-3.svg": "/static/media/step-3.16bfd4e9565f16a3e895d253b15c4658.svg",
     "static/media/lpg.svg": "/static/media/lpg.86185518a470e7fe895a9030d13fb78f.svg",
     "static/media/other-room.svg": "/static/media/other-room.6c7969c174a793a9a89a6006084d0c40.svg",
     "static/media/other.svg": "/static/media/other.6c7969c174a793a9a89a6006084d0c40.svg",
     "static/media/cross.svg": "/static/media/cross.83d7b06b25f220c999e9a454a915ad92.svg",
     "static/media/tick.svg": "/static/media/tick.30ccc1bd752a40bddc549d3c05c21527.svg",
     "static/media/step-1.svg": "/static/media/step-1.7b64e1891a236d9decb7fdbcf755e1f4.svg",
-    "main.f8162195.css.map": "/static/css/main.f8162195.css.map",
-    "main.84d6eaec.js.map": "/static/js/main.84d6eaec.js.map",
+    "static/media/checkmark-circle-outline.svg": "/static/media/checkmark-circle-outline.086ca1b84288fe1bf931.svg",
+    "main.a88bc127.css.map": "/static/css/main.a88bc127.css.map",
+    "main.85881b29.js.map": "/static/js/main.85881b29.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8162195.css",
-    "static/js/main.84d6eaec.js"
+    "static/css/main.a88bc127.css",
+    "static/js/main.85881b29.js"
   ]
 }
