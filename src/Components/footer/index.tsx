@@ -40,33 +40,33 @@ export default function Footer(props: any) {
             <Container>
                 <Row className="justify-content-center">
                     <div className='footer-second-sec'>
-                        <Col sm={4} xs={12}>
-                            <ul className='footer-links'>
-                                <li>
-                                    <Link to='/blog'>Blog</Link>
-                                </li>
-                                {/* <li>
+                        {/* <Col sm={4} xs={12}> */}
+                        {/* <ul className='footer-links'> */}
+                        {/* <li> */}
+                        {/* <Link to='/blog'>Blog</Link> */}
+                        {/* </li> */}
+                        {/* <li>
                                     <Link to='/'>Installer Signup</Link>
                                 </li> */}
-                                {/* <li>
+                        {/* <li>
                                     <Link to='/terms'>T&C's</Link>
                                 </li>
                                 <li>
                                     <Link to='/privacy'>Privacy Policy</Link>
                                 </li> */}
-                                {/* <li>
+                        {/* <li>
                                     <Link to='/'>Sitemap</Link>
                                 </li> */}
-                            </ul>
-                        </Col>
+                        {/* </ul> */}
+                        {/* </Col> */}
 
-                        <Col sm={4} xs={12}>
+                        {/* <Col sm={4} xs={12}>
                             <div className='copyright-text'>
                                 <p>© 2022 EDAN</p>
                             </div>
-                        </Col>
+                        </Col> */}
 
-                        <Col sm={4} xs={12}>
+                        <Col sm={8} xs={12}>
                             <ul className='footer-social-links'>
                                 <li>
                                     <Link to='//www.facebook.com/edanheating/' target={'_blank'} title='Facebook'><Facebook /></Link>
@@ -82,22 +82,17 @@ export default function Footer(props: any) {
                                 </li>
                             </ul>
                         </Col>
-                    </div>
-                </Row>
-            </Container>
-
-            <Container>
-                <Row>
-                    <div className='footer-third-sec' style={{ textAlign: 'center' }}>
-                        <Col>
-                            <p>Terms & Conditions Applied</p>
-                            {/* <p>EDAN is registered in England and Wales No. 08804726 (VAT No. GB205805920 ). Trading address is The Old Rectory, Winwick, Warrington, WA2 8LE.</p> */}
-                            {/* <p>EDAN acts as a credit broker (not as a lender) and offers credit products through a panel of lenders. EDAN is authorised and regulated by the Financial Conduct Authority.</p> */}
-                            {/* <p>¹Included on combi boiler installations only, ²0% APR available on selected packages</p> */}
+                        <Col sm={4} xs={12}>
+                            <div className='footer-third-sec' style={{ textAlign: 'center' }}>
+                                <p>© 2022 EDAN</p>
+                                {/* <p>EDAN is registered in England and Wales No. 08804726 (VAT No. GB205805920 ). Trading address is The Old Rectory, Winwick, Warrington, WA2 8LE.</p> */}
+                                {/* <p>EDAN acts as a credit broker (not as a lender) and offers credit products through a panel of lenders. EDAN is authorised and regulated by the Financial Conduct Authority.</p> */}
+                                {/* <p>¹Included on combi boiler installations only, ²0% APR available on selected packages</p> */}
+                            </div>
                         </Col>
                     </div>
                 </Row>
             </Container>
-        </div>
+        </div >
     )
 }
