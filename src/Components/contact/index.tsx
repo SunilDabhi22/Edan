@@ -1,6 +1,6 @@
 import { Container, Row, Col, Toast, Button } from 'react-bootstrap'
 import './index.css'
-import { MailIcon, Facebook, Instagram, LinkedInIcon, Twitter } from '../../SharedComponents/sharedIcons'
+import { Facebook, Instagram, LinkedInIcon, Twitter } from '../../SharedComponents/sharedIcons'
 import { Formik } from 'formik';
 import { Link } from 'react-router-dom';
 import axios from 'axios';

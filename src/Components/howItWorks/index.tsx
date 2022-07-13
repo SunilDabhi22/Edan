@@ -1,13 +1,8 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import './index.css'
-import AnswerImg from '../../Assets/answer.svg'
-import FitImg from '../../Assets/fit.svg'
-import PickImg from '../../Assets/pick.svg'
 import Step1 from '../../Assets/step-1.svg'
 import Step2 from '../../Assets/step-2.svg'
 import Step3 from '../../Assets/step-3.svg'
-import Testimonial from '../testimonial'
-import FAQ from '../faq';
 import WeAskImg from '../../Assets/we-ask.webp';
 import YouPickImg from '../../Assets/you-pick.jpg';
 import DoneImg from '../../Assets/done.webp';

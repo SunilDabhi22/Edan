@@ -22,7 +22,7 @@ export default function AboutPage(props: any) {
                 <Container>
                     <Row>
                         <Col xs={12} md={12}>
-                            <iframe src="https://www.youtube.com/embed/nsnhIoU6Dt4" allowFullScreen={true} frameBorder="0" />
+                            <iframe title='about' src="https://www.youtube.com/embed/nsnhIoU6Dt4" allowFullScreen={true} frameBorder="0" />
                         </Col>
                     </Row>
                 </Container>
