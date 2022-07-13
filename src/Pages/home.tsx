@@ -18,13 +18,13 @@ export default function HomePage(props: any) {
             <Banner />
             <Partner />
             <BoilerSection />
-            <WhatWeDoSection />
-            <Testimonial />
+            {/* <WhatWeDoSection /> */}
+            {/* <Testimonial /> */}
             <BoilerSection2 />
             {/* <CTA /> */}
             <Article />
-            <FAQ showingFrom='home' />
-            <Quote />
+            {/* <FAQ showingFrom='home' /> */}
+            {/* <Quote /> */}
             <Footer />
         </div>
     )

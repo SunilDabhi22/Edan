@@ -1,3 +1,4 @@
+import { Container, Row, Col } from 'react-bootstrap';
 import './index.css'
 
 export default function BoilerSection(props: any) {
@@ -39,43 +40,56 @@ export default function BoilerSection(props: any) {
             <div className='detail-container'>
                 <div className='detail-col'>
                     <div className='left-detail-sec'>
-                        <h4>Fuss-free <br />fixed prices</h4>
-                        <p className='tagline'>Everything your new boiler needs, we include.</p>
-                        <div className='icon-box'>
-                            <Iconbox1 />
-                            <div className='icon-detail'>
-                                <h5>Gas Safe Installation</h5>
-                                <p>Completed by a local, skilled engineer.</p>
-                            </div>
-                        </div>
-                        <div className='icon-box'>
-                            <Iconbox2 />
-                            <div className='icon-detail'>
-                                <h5>System Cleanse & Filter</h5>
-                                <p>To keep your new boiler running great for longer</p>
-                            </div>
-                        </div>
-                        <div className='icon-box'>
-                            <Iconbox3 />
-                            <div className='icon-detail'>
-                                <h5>Warranty Protection</h5>
-                                <p>On both the product and the installation</p>
-                            </div>
-                        </div>
-                        <div className='icon-box'>
-                            <Iconbox4 />
-                            <div className='icon-detail'>
-                                <h5>Upgraded Controls</h5>
-                                <p>On new combi boiler installations*</p>
-                            </div>
-                        </div>
+                        <h4>Just Fixed Prices <br />
+                            No Additional Cost, No Headache</h4>
+                        {/* <p className='tagline'>Everything your new boiler needs, we include.</p> */}
+                        <Container>
+                            <Row className="align-items-start">
+                                <Col md={6} xs={12}>
+                                    <div className='icon-box'>
+                                        <Iconbox1 />
+                                        <div className='icon-detail'>
+                                            <h5>Gas Safe Installation</h5>
+                                            <p>Completed by a local, skilled engineer.</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col md={6} xs={12}>
+                                    <div className='icon-box'>
+                                        <Iconbox2 />
+                                        <div className='icon-detail'>
+                                            <h5>System Cleanse & Filter</h5>
+                                            <p>To keep your new boiler running great for longer</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col md={6} xs={12}>
+                                    <div className='icon-box'>
+                                        <Iconbox3 />
+                                        <div className='icon-detail'>
+                                            <h5>Warranty Protection</h5>
+                                            <p>On both the product and the installation</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col md={6} xs={12}>
+                                    <div className='icon-box'>
+                                        <Iconbox4 />
+                                        <div className='icon-detail'>
+                                            <h5>Upgraded Controls</h5>
+                                            <p>On new combi boiler installations*</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
                     </div>
                 </div>
-                <div className='detail-col'>
+                {/* <div className='detail-col'>
                     <div className='right-img-sec'>
                         <img src='https://picsum.photos/800/1000' alt='' />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -87,8 +87,8 @@ export default function BoilerSection(props: any) {
                 <Container fluid>
                     <Row className="justify-content-between align-items-center">
                         <Col md={4}>
-                            <h3>Every boiler, for every price.</h3>
-                            <p>Find a boiler that's the right fit for your home, at a price that's right for your needs.</p>
+                            <h3>Right Boiler, Right Prices</h3>
+                            <p>Find a suitable boiler for your needs and leave your worries to Edan Heating.</p>
 
                             <a href='/boiler-quote' className='new_boiler_action'>Get your new boiler</a>
 

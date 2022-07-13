@@ -17,7 +17,7 @@ export default function ContactSection(props: any) {
                 <h1>Contact Us</h1>
             </div>
 
-            <div className='contact_address'>
+            {/* <div className='contact_address'>
                 <Container>
                     <Row className='align-items-center'>
                         <Col md={4} xs={12}>
@@ -71,7 +71,7 @@ export default function ContactSection(props: any) {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </div> */}
 
             <div className='contact_form_sec' id='ContactForm'>
                 <Container>

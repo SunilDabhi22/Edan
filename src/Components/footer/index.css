@@ -1,6 +1,6 @@
 .footer {
-  padding-top: calc(100vw * 1.5 / 27);
-  padding-bottom: calc(100vw * 1.5 / 27);
+  padding-top: 4rem;
+  padding-bottom: 1rem;
   background-color: #ebeced;
 }
 
@@ -99,8 +99,8 @@
 }
 
 .footer .footer-third-sec {
-  margin-top: 3rem;
-  padding: 2rem 2rem 0 2rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem 0 2rem;
 }
 
 .footer .footer-third-sec p {

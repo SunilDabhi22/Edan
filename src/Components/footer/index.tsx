@@ -15,7 +15,7 @@ export default function Footer(props: any) {
 
     return (
         <div className='footer'>
-            <div className='footer-first-sec'>
+            {/* <div className='footer-first-sec'>
                 <Container>
                     <Row className="justify-content-center">
                         <Col className="text-center" lg md sm xs={12}>
@@ -35,7 +35,7 @@ export default function Footer(props: any) {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </div> */}
 
             <Container>
                 <Row className="justify-content-center">
@@ -88,11 +88,12 @@ export default function Footer(props: any) {
 
             <Container>
                 <Row>
-                    <div className='footer-third-sec'>
+                    <div className='footer-third-sec' style={{ textAlign: 'center' }}>
                         <Col>
-                            <p>EDAN is registered in England and Wales No. 08804726 (VAT No. GB205805920 ). Trading address is The Old Rectory, Winwick, Warrington, WA2 8LE.</p>
-                            <p>EDAN acts as a credit broker (not as a lender) and offers credit products through a panel of lenders. EDAN is authorised and regulated by the Financial Conduct Authority.</p>
-                            <p>¹Included on combi boiler installations only, ²0% APR available on selected packages</p>
+                            <p>Terms & Conditions Applied</p>
+                            {/* <p>EDAN is registered in England and Wales No. 08804726 (VAT No. GB205805920 ). Trading address is The Old Rectory, Winwick, Warrington, WA2 8LE.</p> */}
+                            {/* <p>EDAN acts as a credit broker (not as a lender) and offers credit products through a panel of lenders. EDAN is authorised and regulated by the Financial Conduct Authority.</p> */}
+                            {/* <p>¹Included on combi boiler installations only, ²0% APR available on selected packages</p> */}
                         </Col>
                     </div>
                 </Row>

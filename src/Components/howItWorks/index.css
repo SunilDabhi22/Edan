@@ -1,11 +1,11 @@
 .how_first_sec {
-  padding-top: calc(100vw * 1.5 / 27);
-  padding-bottom: calc(100vw * 1.5 / 27);
+  padding-top: 5rem;
+  padding-bottom: 1rem;
 }
 
 .how_first_sec h1 {
-  font-size: 4rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 600;
   color: #000000;
 }
 
@@ -17,10 +17,10 @@
 }
 
 .how_second_sec .how_qa_section {
-  background-color: rgb(0 150 64 / 17%);
+  /* background-color: rgb(0 150 64 / 17%); */
   padding-top: calc(100vw * 1.5 / 27);
   padding-bottom: calc(100vw * 1.5 / 27);
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .how_second_sec .how_qa_section:last-child {

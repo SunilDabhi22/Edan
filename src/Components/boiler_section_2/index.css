@@ -100,24 +100,28 @@
 }
 
 .boiler-details .detail-container .detail-col {
-  width: 50%;
+  width: 100%;
+}
+
+.boiler-details .detail-container .detail-col .box-grid {
+  display: flex;
 }
 
 @media (max-width: 480px) {
-  .boiler-details .left-detail-sec{
+  .boiler-details .left-detail-sec {
     padding-top: calc(100vw * 3.8 / 31);
     padding-bottom: calc(100vw * 3.8 / 31);
   }
   .boiler-details .detail-container .detail-col {
     width: 100%;
   }
-  .boiler-details .left-detail-sec h4{
+  .boiler-details .left-detail-sec h4 {
     font-size: 2.5rem;
   }
-  .boiler-details .left-detail-sec .icon-box .icon-detail h5{
+  .boiler-details .left-detail-sec .icon-box .icon-detail h5 {
     font-size: 1.2rem;
   }
-  .boiler-details .right-img-sec img{
+  .boiler-details .right-img-sec img {
     min-height: 300px;
   }
 }

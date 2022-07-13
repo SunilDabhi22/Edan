@@ -7,19 +7,19 @@ import Step1 from '../../Assets/step-1.svg'
 import Step2 from '../../Assets/step-2.svg'
 import Step3 from '../../Assets/step-3.svg'
 import Testimonial from '../testimonial'
-import FAQ from '../faq'
+import FAQ from '../faq';
+import WeAskImg from '../../Assets/we-ask.webp';
+import YouPickImg from '../../Assets/you-pick.jpg';
+import DoneImg from '../../Assets/done.webp';
 
 export default function HowItWorksPage(props: any) {
     return (
         <div className='how_main'>
             <div className='how_first_sec'>
                 <Container>
-                    <Row className='align-items-center'>
-                        <Col md={5} style={{ textAlign: 'center' }}>
-                            <h1>How it<br /> works</h1>
-                        </Col>
-                        <Col md={7}>
-                            <p>It's the best way to buy the thing you need.</p>
+                    <Row>
+                        <Col md={12} xs={12}>
+                            <h1>How it works</h1>
                         </Col>
                     </Row>
                 </Container>
@@ -31,15 +31,14 @@ export default function HowItWorksPage(props: any) {
                         <Row className='align-items-center'>
                             <Col md={5} style={{ textAlign: 'center', position: 'relative' }}>
                                 <div className='qa_img'>
-                                    <img src={AnswerImg} alt='' />
+                                    <img src={WeAskImg} alt='' />
                                 </div>
                             </Col>
                             <Col md={7}>
                                 <div className='qa_title'>
                                     <img src={Step1} alt='' /> <h4>We ask</h4>
                                 </div>
-                                <p>Some simple questions about your home and it's current heating system. From this, we can figure out which type of boiler you'll need, how powerful it will need to be and see if it's going to need any other additional safety attachments.</p>
-                                <p>It takes as little as 60 seconds to get your quote, and there are no knocks at your door.</p>
+                                <p>We ask simple questions about your home and it's current heating system. From this, we can figure out which type of boiler you'll need.</p>
                             </Col>
                         </Row>
                     </Container>
@@ -50,16 +49,14 @@ export default function HowItWorksPage(props: any) {
                         <Row className='align-items-center'>
                             <Col md={5} style={{ textAlign: 'center', position: 'relative' }}>
                                 <div className='qa_img'>
-                                    <img src={PickImg} alt='' />
+                                    <img src={YouPickImg} alt='' />
                                 </div>
                             </Col>
                             <Col md={7}>
                                 <div className='qa_title'>
                                     <img src={Step2} alt='' /> <h4>You pick</h4>
                                 </div>
-                                <p>On a date that suits you, using a local, Edan group certified engineer.</p>
-                                <p>They'll bring the boiler and all of the materials with them, and, once the installation is complete, we'll get it registered with Gas Safe and we'll even register your new boiler with the manufacturer too.</p>
-                                <p>Every installation gets our exclusive 12 month workmanship warranty, so if there's an issue, it won't be an issue.</p>
+                                <p>Choose from a range of recommended boilers, which are perfectly suited to your home's needs. Everything you'll need is included in your price. No hidden costs and no headaches.</p>
                             </Col>
                         </Row>
                     </Container>
@@ -70,22 +67,21 @@ export default function HowItWorksPage(props: any) {
                         <Row className='align-items-center'>
                             <Col md={5} style={{ textAlign: 'center', position: 'relative' }}>
                                 <div className='qa_img'>
-                                    <img src={FitImg} alt='' />
+                                    <img src={DoneImg} alt='' />
                                 </div>
                             </Col>
                             <Col md={7}>
                                 <div className='qa_title'>
-                                    <img src={Step3} alt='' /> <h4>We fit</h4>
+                                    <img src={Step3} alt='' /> <h4>Done</h4>
                                 </div>
-                                <p>Some simple questions about your home and it's current heating system. From this, we can figure out which type of boiler you'll need, how powerful it will need to be and see if it's going to need any other additional safety attachments.</p>
-                                <p>It takes as little as 60 seconds to get your quote, and there are no knocks at your door.</p>
+                                <p>Sit back, and relax. Edan team takes over from the date you choose and installs the boiler.</p>
                             </Col>
                         </Row>
                     </Container>
                 </div>
             </div>
 
-            <div className='how_quote_sec'>
+            {/* <div className='how_quote_sec'>
                 <Container>
                     <Row>
                         <Col md={12}>
@@ -94,9 +90,9 @@ export default function HowItWorksPage(props: any) {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </div> */}
 
-            <div className='how_support_sec'>
+            {/* <div className='how_support_sec'>
                 <Container>
                     <Row className='align-items-center'>
                         <Col md={4}>
@@ -110,10 +106,10 @@ export default function HowItWorksPage(props: any) {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </div> */}
 
-            <Testimonial />
-            <FAQ showing='home' />
+            {/* <Testimonial />
+            <FAQ showing='home' /> */}
         </div>
     )
 }
